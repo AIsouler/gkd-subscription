@@ -21,6 +21,7 @@ export const blackListAppIDs: string[] = [
   'com.miui.compass', // 指南针
   'com.duokan.phone.remotecontroller', // 万能遥控
   'com.mfashiongallery.emag', // 小米画报
+  'com.android.calendar', // 日历
 
   // 第三方应用
   'com.tencent.mm', // 微信
