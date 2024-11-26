@@ -83,7 +83,7 @@ export default defineGkdApp({
           activityIds:
             'com.meituan.android.hybridcashier.HybridCashierActivity',
           matches:
-            '[text="支付成功"] >5 @[clickable=true][text="完成"] <<n [vid="mil_container"]',
+            '@Button[text="完成"] < View <2 View < View <2 View < WebView[text="支付成功"] < WebView < [vid="mil_container"]',
           snapshotUrls: 'https://i.gkd.li/i/14392284',
         },
       ],

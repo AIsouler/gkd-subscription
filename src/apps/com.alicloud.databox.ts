@@ -58,7 +58,7 @@ export default defineGkdApp({
         {
           activityIds: 'com.alicloud.databox.MainActivity',
           matches:
-            '[text="允许后台自动备份"] < * +3 @TextView[index=3][clickable=true] <<n [vid="webContainer"]',
+            '[text="允许后台自动备份"] < * +3 @TextView[clickable=true][index=parent.childCount.minus(1)] <<n [vid="webContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/14414446',
         },
       ],
