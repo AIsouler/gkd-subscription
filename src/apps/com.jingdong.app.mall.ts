@@ -51,8 +51,15 @@ export default defineGkdApp({
           activityIds:
             'com.jd.lib.message.messagecenter2.MessageCenterMainActivity',
           matches:
-            '@[desc="关闭按钮"][clickable=true] < * > [text^="打开系统通知"]',
+            '@[desc="关闭按钮"][clickable=true] + [text^="打开系统通知"]',
           snapshotUrls: 'https://i.gkd.li/i/15228909',
+        },
+        {
+          key: 2,
+          activityIds:
+            'com.jd.lib.message.messagecenter2.MessageCenterMainActivity',
+          matches: '@[desc="关闭按钮"] - LinearLayout > [text="开启消息通知"]',
+          snapshotUrls: 'https://i.gkd.li/i/17912519',
         },
       ],
     },
