@@ -12,7 +12,10 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: '.activity.NewPageMaskActivity',
-          matches: ['[text="继续拼单"]', '[text="先去逛逛"]'], // @[clickable=true] > [text="先去逛逛"]该写法有概率失效
+          matches: [
+            '[text="继续拼单"][visibleToUser=true]',
+            '[text="先去逛逛"][visibleToUser=true]',
+          ], // @[clickable=true] > [text="先去逛逛"]该写法有概率失效
           snapshotUrls: [
             'https://i.gkd.li/i/15197527',
             'https://i.gkd.li/i/15211473',
@@ -49,18 +52,28 @@ export default defineGkdApp({
           action: 'back',
           activityIds: '.ui.activity.HomeActivity',
           matches:
-            '@ViewGroup[childCount=1][clickable=true] < ViewGroup[childCount=2] < [childCount=1] < [vid="pdd"][childCount=1] < [childCount=1] < [vid="pdd"][childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [parent=null]',
+            '@ViewGroup[childCount=1][clickable=true][visibleToUser=true] < ViewGroup[childCount=2] < [childCount=1] < [vid="pdd"][childCount=1] < [childCount=1] < [vid="pdd"][childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [parent=null]',
           snapshotUrls: 'https://i.gkd.li/i/17348846',
         },
         {
           key: 4,
+          fastQuery: true,
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: 'app',
           action: 'back',
           activityIds: '.activity.NewPageMaskActivity',
-          matches: '[text="立即使用"][visibleToUser=true]',
+          matches:
+            '@TextView[text="你有一张无门槛券可使用"][visibleToUser=true] <3 View < View < View < View < WebView < WebView < FrameLayout < FrameLayout <2 ViewGroup <2 FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/17613246',
+        },
+        {
+          key: 5,
+          fastQuery: true,
+          action: 'back',
+          activityIds: '.activity.NewPageActivity',
+          matches: '[text="本单可用优惠"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/17933585',
         },
       ],
     },
