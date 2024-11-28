@@ -34,7 +34,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          activityIds: '.pb.pb.main.PbActivity',
           matches:
             '@[clickable=true][vid="obfuscated"][visibleToUser=true] <(1,2) RelativeLayout <(1,4) RelativeLayout[childCount>1] >(3,4) [text="广告"]',
           snapshotUrls: [
@@ -46,9 +46,9 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: [
-            'com.baidu.tieba.tblauncher.MainTabActivity',
-            'com.baidu.tieba.pb.pb.main.PbActivity',
-            'com.baidu.tieba.forum.ForumActivity',
+            '.tblauncher.MainTabActivity',
+            '.pb.pb.main.PbActivity',
+            '.forum.ForumActivity',
           ],
           matches:
             '@FrameLayout[clickable=true][visibleToUser=true] <4 RelativeLayout + FrameLayout >7 [text="广告"]',
@@ -57,6 +57,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16596195',
             'https://i.gkd.li/i/16596775',
           ],
+        },
+        {
+          key: 2,
+          activityIds: '.tblauncher.MainTabActivity',
+          matches:
+            '@[clickable=true][vid="obfuscated"][visibleToUser=true] < LinearLayout <4 RelativeLayout +3 LinearLayout >4 [text="小游戏"]',
+          snapshotUrls: 'https://i.gkd.li/i/17943902',
         },
       ],
     },
@@ -68,7 +75,7 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           actionMaximum: 1,
-          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          activityIds: '.pb.pb.main.PbActivity',
           matches:
             '@ImageView[clickable=true][visibleToUser=true] <2 LinearLayout - * > [text$="热议中" || text^="猜你喜欢" || text*="进吧逛逛"]',
           snapshotUrls: [
@@ -83,11 +90,11 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           activityIds: [
-            'com.baidu.tieba.tblauncher.MainTabActivity',
-            'com.baidu.tieba.pb.pb.main.PbActivity',
+            '.tblauncher.MainTabActivity',
+            '.pb.pb.main.PbActivity',
           ],
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] - [text="广告"]',
+            '@ImageView[clickable=true][visibleToUser=true][vid="obfuscated"] - [text="广告"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16622395',
             'https://i.gkd.li/i/16632851',
@@ -99,16 +106,17 @@ export default defineGkdApp({
       key: 3,
       name: '全屏广告-会员弹窗',
       desc: '点击关闭',
+      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+          activityIds: '.tblauncher.MainTabActivity',
           matches:
-            '[text="会员弹窗"] >(2,3) View[childCount=3] > Image[index=2][text!=null][visibleToUser=true]',
+            '@Image[text!=null][index=parent.childCount.minus(1)][visibleToUser=true] <3 View < View < View < WebView[text="会员弹窗"] < WebView < FrameLayout < [id="android:id/content"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/14630806',
             'https://i.gkd.li/i/16595138',
+            'https://i.gkd.li/i/17944283',
           ],
         },
       ],
@@ -120,10 +128,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: [
-            'com.baidu.tieba.tblauncher.MainTabActivity',
-            'com.baidu.tieba.forum.ForumActivity',
-          ],
+          activityIds: ['.tblauncher.MainTabActivity', '.forum.ForumActivity'],
           matches:
             '@ImageView[clickable=true][visibleToUser=true] <(1,2) LinearLayout <4 RelativeLayout +2 RelativeLayout >2 [text="直播中"]',
           snapshotUrls: [
@@ -134,9 +139,9 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: [
-            'com.baidu.tieba.forum.ForumActivity',
-            'com.baidu.tieba.pb.pb.main.PbActivity',
-            'com.baidu.tieba.tblauncher.MainTabActivity',
+            '.forum.ForumActivity',
+            '.pb.pb.main.PbActivity',
+            '.tblauncher.MainTabActivity',
           ],
           matches:
             '@FrameLayout[clickable=true][visibleToUser=true] < LinearLayout < RelativeLayout <3 LinearLayout < RelativeLayout + LinearLayout >2 [text$="广告"]',
@@ -148,7 +153,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          activityIds: '.pb.pb.main.PbActivity',
           matches:
             '@FrameLayout[clickable=true][visibleToUser=true] < LinearLayout < FrameLayout -(1,2) [text$="广告"]',
           snapshotUrls: [
@@ -158,7 +163,7 @@ export default defineGkdApp({
         },
         {
           key: 3,
-          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          activityIds: '.pb.pb.main.PbActivity',
           matches:
             '@ImageView[clickable=true][visibleToUser=true] -3 [text="直播中"]',
           snapshotUrls: 'https://i.gkd.li/i/16596210',
@@ -166,9 +171,9 @@ export default defineGkdApp({
         {
           preKeys: [0, 1, 2, 3],
           activityIds: [
-            'com.baidu.tieba.tblauncher.MainTabActivity',
-            'com.baidu.tieba.pb.pb.main.PbActivity',
-            'com.baidu.tieba.forum.ForumActivity',
+            '.tblauncher.MainTabActivity',
+            '.pb.pb.main.PbActivity',
+            '.forum.ForumActivity',
           ],
           matches:
             '@View[clickable=true][visibleToUser=true] - [text^="选择不喜欢"]',
@@ -188,10 +193,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: [
-            'com.baidu.tieba.forum.ForumActivity',
-            'com.baidu.tieba.tblauncher.MainTabActivity',
-          ],
+          activityIds: ['.forum.ForumActivity', '.tblauncher.MainTabActivity'],
           // 防止误触标题以“游戏”开头的帖子，此页面推广帖子和正常帖子节点没有区别；[childCount=2]区分是否在热门页面
           excludeMatches: 'RelativeLayout[childCount=2] > [text="热门"]',
           matches:
@@ -206,10 +208,13 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+          activityIds: ['.tblauncher.MainTabActivity', '.forum.ForumActivity'],
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] - [text="你可能感兴趣的吧"]',
-          snapshotUrls: 'https://i.gkd.li/i/16914357',
+            '@ImageView[clickable=true][visibleToUser=true][vid="obfuscated"] - [text="你可能感兴趣的吧" || text^="本吧的人都在逛"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16914357',
+            'https://i.gkd.li/i/17944680',
+          ],
         },
       ],
     },

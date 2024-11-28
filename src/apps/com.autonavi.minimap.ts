@@ -30,7 +30,10 @@ export default defineGkdApp({
         {
           key: 0,
           action: 'back',
-          matches: '[text="版本升级"]',
+          matches: [
+            '[text="版本升级"][visibleToUser=true]',
+            '[text="取消"][visibleToUser=true]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/15510687',
         },
       ],
