@@ -99,6 +99,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16622395',
             'https://i.gkd.li/i/16632851',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/13327933',
         },
       ],
     },
