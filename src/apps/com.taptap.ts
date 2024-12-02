@@ -13,6 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.upgrade.library.dialog.UpgradeDialogAct',
           matches: ['[text="发现新版本"]', '[vid="btn_dismiss"]'],
           snapshotUrls: [
             'https://i.gkd.li/i/13387479',

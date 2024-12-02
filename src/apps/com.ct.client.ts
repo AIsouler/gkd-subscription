@@ -31,6 +31,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.common.ConfirmDialogActivity',
           matches: '[text="取消升级"]',
           snapshotUrls: 'https://i.gkd.li/i/15040579',
         },

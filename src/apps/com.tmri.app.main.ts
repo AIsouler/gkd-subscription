@@ -13,6 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.tmri.app.ui.activity.main.MainTabHostNewActivity',
           matches: ['[text="立即更新"]', '[text="以后再说"]'],
           snapshotUrls: 'https://i.gkd.li/i/15613861',
         },

@@ -238,6 +238,10 @@ export default defineGkdApp({
       matchTime: 10000,
       resetMatch: 'app',
       actionMaximum: 1,
+      activityIds: [
+        '.app.ui.activity.MainActivity',
+        '.feature.short_container_feature.ui.ShortContainerHostActivity',
+      ],
       rules: [
         {
           key: 0,

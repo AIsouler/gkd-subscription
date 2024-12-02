@@ -42,6 +42,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.MainActivity',
           matches:
             '[text*="新版本"] >4 View[childCount=4] > @View > Image <<n [vid="webContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/13806865',

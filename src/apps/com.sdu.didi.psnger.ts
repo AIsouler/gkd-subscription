@@ -13,6 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.didi.sdk.app.MainActivity',
           matches: '[vid="iv_upgrade_btn_ignore"]',
           snapshotUrls: 'https://i.gkd.li/i/14582620',
         },

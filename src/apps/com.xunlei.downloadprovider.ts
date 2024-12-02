@@ -48,6 +48,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.xunlei.upgrade.XUpgradeActivity',
           matches: '[id="com.xunlei.downloadprovider:id/x_upgrade_cancel"]',
           snapshotUrls: 'https://i.gkd.li/i/13228920',
         },
@@ -107,6 +108,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.xunlei.uikit.activity.TransformActivity',
           matches: ['[text="是否打开系统通知"]', '[vid="btn_close"]'],
           snapshotUrls: 'https://i.gkd.li/i/15322046',
         },

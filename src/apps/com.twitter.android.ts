@@ -13,6 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.twitter.app.main.MainActivity',
           matches: '[id="com.twitter.android:id/app_rating_button_never"]',
           snapshotUrls: 'https://i.gkd.li/i/13774150',
         },
@@ -27,6 +28,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.twitter.app.main.MainActivity',
           matches:
             '@[clickable=true] > [visibleToUser=true][text="Not now"] <<n [vid="half_cover_recycler_view_holder"]',
           snapshotUrls: 'https://i.gkd.li/i/13930126',

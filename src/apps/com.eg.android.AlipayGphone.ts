@@ -39,6 +39,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          activityIds: [
+            '.AlipayLogin',
+            'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
+          ],
           matches: [
             '[text="立即更新" || text="马上体验" || text="版本更新"]',
             '[text*="稍后" || id="com.alipay.mobile.antui:id/btn_close"]',

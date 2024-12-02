@@ -13,6 +13,11 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: [
+            'com.meituan.android.upgrade.ui.f',
+            'com.meituan.android.upgrade.UpgradeDialogActivity',
+            'com.meituan.android.pt.homepage.activity.MainActivity',
+          ],
           matches: [
             '[text^="新版本"]',
             '[id="com.sankuai.meituan:id/btn_close"]',
@@ -33,14 +38,10 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          key: 0,
-          action: 'back',
-          matches: 'TextView[text="小调查"]',
-          snapshotUrls: 'https://i.gkd.li/i/12639723',
-        },
-        {
           key: 1,
           action: 'back',
+          activityIds:
+            'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
           matches: '[id="com.sankuai.meituan:id/questionnaireTitle"]',
           snapshotUrls: 'https://i.gkd.li/i/13682336',
         },

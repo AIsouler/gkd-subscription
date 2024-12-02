@@ -13,6 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.MainActivity',
           matches: ['[text="开启智能更新"]', '[text="暂不开启"]'],
           snapshotUrls: 'https://i.gkd.li/i/15127998',
         },

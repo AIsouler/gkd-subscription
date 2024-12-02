@@ -37,6 +37,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.ui.MainActivity',
           matches: ['[vid="view_score_style"]', '[text="以后再说"]'],
           snapshotUrls: 'https://i.gkd.li/i/14317054',
         },

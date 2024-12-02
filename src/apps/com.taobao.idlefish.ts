@@ -11,9 +11,10 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
       rules: [
         {
+          activityIds:
+            'com.taobao.idlefish.maincontainer.activity.MainActivity',
           matches: ['[text*="开启手机信息权限"]', '[text="取消"]'],
           snapshotUrls: 'https://i.gkd.li/i/13620277',
         },
@@ -28,6 +29,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.maincontainer.activity.MainActivity',
           matches: ['[text="立即升级"]', '[text="暂不升级"]'],
           snapshotUrls: 'https://i.gkd.li/i/13832272',
         },

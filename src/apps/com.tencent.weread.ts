@@ -14,6 +14,7 @@ export default defineGkdApp({
       rules: [
         {
           action: 'back',
+          activityIds: '.WeReadFragmentActivity',
           matches: '[vid="open_notification_title"]',
           snapshotUrls: 'https://i.gkd.li/i/15797560',
         },

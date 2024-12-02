@@ -29,6 +29,8 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds:
+            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
           matches: ['[text="开启通知"]', '[text="不用了"]'],
           snapshotUrls: 'https://i.gkd.li/i/16914351',
         },

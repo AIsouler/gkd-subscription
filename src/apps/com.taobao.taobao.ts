@@ -59,6 +59,10 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: [
+            'com.taobao.android.detail.wrapper.activity.DetailActivity',
+            'com.taobao.android.order.bundle.TBOrderListActivity',
+          ],
           matches: '[vid="update_imageview_cancel_v2"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13336760',

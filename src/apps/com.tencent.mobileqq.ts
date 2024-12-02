@@ -169,6 +169,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          activityIds: '.activity.SplashActivity',
           matches: '@[desc="关闭"] <2 * >2 Button[text^="立即"][text.length=4]',
           snapshotUrls: [
             'https://i.gkd.li/i/13386719',
@@ -177,6 +178,7 @@ export default defineGkdApp({
         },
         {
           key: 1,
+          activityIds: '.upgrade.activity.UpgradeActivity',
           matches: ['[text="立即升级"]', '[text="稍后处理"]'],
           snapshotUrls: 'https://i.gkd.li/i/14724108',
         },
@@ -192,7 +194,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches:
             '@ImageView[clickable=true][visibleToUser=true] -2 [text*="新版本" || text*="版本更新"][text.length<10]',
           snapshotUrls: [
