@@ -48,11 +48,13 @@ export default defineGkdApp({
       key: 1,
       name: '更新提示',
       fastQuery: true,
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
           action: 'back',
+          activityIds: '.view.main.MainActivity',
           matches: '[text="立即更新"]',
           snapshotUrls: 'https://i.gkd.li/i/15511206',
         },
