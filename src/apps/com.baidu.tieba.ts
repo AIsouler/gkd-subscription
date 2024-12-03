@@ -101,6 +101,14 @@ export default defineGkdApp({
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/13327933',
         },
+        {
+          key: 2,
+          activityIds: '.forum.ForumActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true] <2 LinearLayout - * > [text^="关注本吧"]',
+          exampleUrls: 'https://e.gkd.li/756c02b5-a72c-4ca4-a05c-a33202e8ecd6',
+          snapshotUrls: 'https://i.gkd.li/i/17992981',
+        },
       ],
     },
     {
