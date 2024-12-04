@@ -87,7 +87,6 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.janz.music.ui.SearchActivity',
           matches: '[vid="ksad_ad_dislike"]',
-          exampleUrls: 'https://e.gkd.li/c5a12934-1c5f-41ac-9305-ed191728d515',
           snapshotUrls: 'https://i.gkd.li/i/17893524',
         },
       ],
