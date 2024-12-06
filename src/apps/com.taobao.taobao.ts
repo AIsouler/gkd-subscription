@@ -39,13 +39,10 @@ export default defineGkdApp({
           ],
           matches: '@[desc="关闭按钮"] - [vid="poplayer_native_state_id"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/12642792',
-            'https://i.gkd.li/i/13180826',
             'https://i.gkd.li/i/12648734',
             'https://i.gkd.li/i/12648746',
             'https://i.gkd.li/i/13198239',
             'https://i.gkd.li/i/13198052',
-            'https://i.gkd.li/i/13249418',
             'https://i.gkd.li/i/14905372',
           ],
         },
@@ -121,7 +118,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '功能类-"「0元下单」权益"弹窗',
+      name: '全屏广告-"「0元下单」权益"弹窗',
       desc: '点击关闭',
       rules: [
         {

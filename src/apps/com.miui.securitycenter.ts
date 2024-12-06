@@ -51,6 +51,7 @@ export default defineGkdApp({
       name: '功能类-高敏感权限自动确定',
       desc: '勾选[我已知晓可能存在的风险]-10s后点击[确定]',
       fastQuery: true,
+      actionMaximum: 1,
       activityIds: [
         'com.miui.permcenter.privacymanager.SpecialPermissionInterceptActivity',
         'com.miui.permcenter.privacymanager.DeviceManagerApplyActivity',

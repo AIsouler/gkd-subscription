@@ -7,8 +7,8 @@ export default defineGkdApp({
     {
       key: 1,
       name: '全屏广告-弹窗广告',
-      fastQuery: true,
       matchRoot: true,
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -43,9 +43,9 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.xiaomi.market.business_ui.main.MarketTabActivity',
       rules: [
         {
+          activityIds: 'com.xiaomi.market.business_ui.main.MarketTabActivity',
           matches: '[id="com.xiaomi.market:id/close_float_recommend"]',
           snapshotUrls: 'https://i.gkd.li/i/13624971',
         },

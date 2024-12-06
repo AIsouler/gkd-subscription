@@ -9,6 +9,7 @@ export default defineGkdApp({
       name: '功能类-自动安装/更新应用',
       matchRoot: true,
       fastQuery: true,
+      actionMaximum: 1,
       rules: [
         {
           key: 0,
@@ -39,6 +40,7 @@ export default defineGkdApp({
       key: 2,
       name: '功能类-放弃开启安全守护',
       fastQuery: true,
+      actionMaximum: 1,
       activityIds:
         'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
       rules: [
@@ -60,6 +62,7 @@ export default defineGkdApp({
       key: 3,
       name: '功能类-自动允许应用安装软件',
       fastQuery: true,
+      actionMaximum: 1,
       activityIds: 'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
       rules: [
         {
@@ -86,6 +89,7 @@ export default defineGkdApp({
       key: 4,
       name: '功能类-备案信息弹窗',
       desc: '点击[继续安装]',
+      actionMaximum: 1,
       rules: [
         {
           fastQuery: true,
@@ -100,6 +104,7 @@ export default defineGkdApp({
       key: 5,
       name: '功能类-无视风险继续安装',
       fastQuery: true,
+      actionMaximum: 1,
       activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
       rules: [
         {

@@ -126,14 +126,14 @@ export default defineGkdApp({
       name: '功能类-自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
       actionMaximum: 1,
-      activityIds: [
-        'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
-        'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
-      ],
       rules: [
         {
           key: 1,
           fastQuery: true,
+          activityIds: [
+            'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+            'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
+          ],
           matches:
             '@ImageButton[desc="未选中,原图,复选框"][visibleToUser=true] + [text="原图"]',
           snapshotUrls: [
@@ -150,14 +150,14 @@ export default defineGkdApp({
       name: '开屏广告-微信小程序',
       fastQuery: true,
       matchTime: 10000,
-      // actionMaximum: 1, // 经常需要点2次，首次点击过早大概率跳不过
+      // actionMaximum: 1, // 经常需要点2次
       priorityTime: 10000,
-      activityIds: [
-        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-        'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
-      ],
       rules: [
         {
+          activityIds: [
+            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+            'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+          ],
           actionDelay: 800, // 过早点击首次大概率跳不过
           matches: [
             '[text="广告"][visibleToUser=true]',
@@ -180,16 +180,12 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: [
-            'com.tencent.mm.plugin.finder.ui.',
-            'com.tencent.mm.ui.LauncherUI',
-          ],
+          activityIds: 'com.tencent.mm.plugin.finder.ui.',
           matches: ['[text*="青少年模式"]', '[text="我知道了"]'],
           snapshotUrls: [
             'https://i.gkd.li/i/13538145',
             'https://i.gkd.li/i/13575195',
             'https://i.gkd.li/i/14735456',
-            'https://i.gkd.li/i/14896723',
           ],
         },
       ],
@@ -206,8 +202,8 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/14399355',
             'https://i.gkd.li/i/14662147',
-            'https://i.gkd.li/i/14532946', // 避免在此页面误触
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/14532946',
         },
       ],
     },
@@ -245,10 +241,10 @@ export default defineGkdApp({
       name: '功能类-付款时自动点击[支付]',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
       rules: [
         {
           key: 0,
+          activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
           matches:
             'ViewGroup + ViewGroup > ViewGroup > [vid="kinda_button_impl_wrapper"][desc="支付"]',
           snapshotUrls: [

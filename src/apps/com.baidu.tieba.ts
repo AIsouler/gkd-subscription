@@ -40,8 +40,8 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/16595124',
             'https://i.gkd.li/i/16596297',
-            'https://i.gkd.li/i/16632851', // [childCount>1] 防止误触
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/16632851', // [childCount>1] 防止误触
         },
         {
           key: 1,

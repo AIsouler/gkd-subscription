@@ -12,14 +12,6 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          key: 0,
-          name: '云存储空间不足弹窗',
-          activityIds:
-            'com.miui.cloudservice.hybrid.SignDeductDialogHybridActivity',
-          matches: '[text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/12847374',
-        },
-        {
           key: 1,
           name: '会员打折弹窗',
           fastQuery: true,

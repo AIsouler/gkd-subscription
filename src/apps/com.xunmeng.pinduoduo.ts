@@ -81,10 +81,10 @@ export default defineGkdApp({
       key: 2,
       name: '局部广告-商品详情页视频讲解窗口',
       desc: '点击关闭',
-      fastQuery: true,
       actionMaximum: 1,
       rules: [
         {
+          fastQuery: true,
           activityIds: 'com.xunmeng.pinduoduo.activity.NewPageActivity',
           matches: '[vid="iv_float_window_close"]',
           snapshotUrls: 'https://i.gkd.li/i/14549415',

@@ -15,10 +15,8 @@ export default defineGkdApp({
       rules: [
         {
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15084759',
-            'https://i.gkd.li/i/15079224', // 全局规则在此页面误触
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/15084759',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/15079224', // 全局规则在此误触
         },
       ],
     },

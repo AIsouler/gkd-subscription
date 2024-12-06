@@ -44,7 +44,7 @@ export default defineGkdApp({
         {
           activityIds: '.MainActivity',
           matches:
-            '[text*="新版本"] >4 View[childCount=4] > @View > Image <<n [vid="webContainer"]',
+            '[text*="新版本"] >4 View[childCount=4] > @View[clickable=true][childCount=1] > Image[childCount=0] <<n [vid="webContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/13806865',
         },
       ],
@@ -102,7 +102,7 @@ export default defineGkdApp({
           action: 'back',
           activityIds: 'com.alicloud.databox.MainActivity',
           matches:
-            'View[childCount=3] > TextView[index=1][text=""] <<n [vid="webContainer"]',
+            'WebView[text!=null] > View[childCount=1] > View[childCount=1] > View[childCount=3] > @TextView[index=1][childCount=0][visibleToUser=true] <<n [vid="webContainer"]',
           snapshotUrls: [
             'https://i.gkd.li/i/14235204',
             'https://i.gkd.li/i/15524739',

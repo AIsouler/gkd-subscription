@@ -16,14 +16,14 @@ export default defineGkdApp({
         {
           key: 0,
           excludeActivityIds: [
-            'com.netease.cloudmusic.music.biz.setting.activity.SettingActivity',
+            '.music.biz.setting.activity.SettingActivity',
             '.music.biz.search.activity.SearchActivity',
           ],
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15092772',
-            'https://i.gkd.li/i/15092814', // 避免误触
-            'https://i.gkd.li/i/16318423', // 避免误触
+          snapshotUrls: 'https://i.gkd.li/i/15092772',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/15092814',
+            'https://i.gkd.li/i/16318423',
           ],
         },
       ],
@@ -43,6 +43,7 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/import/13927753',
         },
         {
+          // preKeys: [0], 可能会被其他弹窗插入触发其他规则导致二段不触发
           key: 1,
           matches: '[text="直接关闭"]',
           snapshotUrls: 'https://i.gkd.li/import/13927752',
@@ -71,8 +72,8 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15047126',
             'https://i.gkd.li/i/15125892',
             'https://i.gkd.li/i/15244091',
-            'https://i.gkd.li/i/15404777', // 避免误触
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/15404777',
         },
         {
           key: 5,

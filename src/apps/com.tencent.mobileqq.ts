@@ -12,30 +12,31 @@ export default defineGkdApp({
       actionMaximum: 1,
       resetMatch: 'app',
       priorityTime: 10000,
-      excludeActivityIds: [
-        'com.tencent.mobileqq.activity.ChatActivity', // 在聊天界面禁用
-        'com.tencent.mobileqq.search.activity.UniteSearchActivity', // 在搜索页面禁用
-      ],
       rules: [
         {
+          excludeActivityIds: [
+            'com.tencent.mobileqq.activity.ChatActivity', // 在聊天界面禁用
+            'com.tencent.mobileqq.search.activity.UniteSearchActivity', // 在搜索页面禁用
+          ],
           excludeMatches: '[vid="root"]', // 在聊天界面禁用，若排除EditText[vid="input"]则滑动消息时会造成误触
           matches: 'TextView[text^="跳过"][text.length<=10][vid!="title"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13093155',
             'https://i.gkd.li/i/13207731',
-            'https://i.gkd.li/i/13217807', // 避免在聊天界面误触
-            'https://i.gkd.li/i/13856647', // 误触
-            'https://i.gkd.li/i/13868177', // 误触
-            'https://i.gkd.li/i/14341023', // 误触
-            'https://i.gkd.li/i/15334565', // 误触
+          ],
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/13217807',
+            'https://i.gkd.li/i/13856647',
+            'https://i.gkd.li/i/13868177',
+            'https://i.gkd.li/i/14341023',
+            'https://i.gkd.li/i/15334565',
           ],
         },
       ],
     },
     {
       key: 1,
-      name: '分段广告-动态页好友热播',
-      desc: '好友动态中的好友热播，自动选择“减少好友热播” - 默认关闭',
+      name: '分段广告-动态页[好友热播/为你推荐]',
       fastQuery: true,
       activityIds: [
         'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
@@ -44,20 +45,24 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '点击[好友热播]卡片右上角菜单按钮',
-          matches: '@Button[clickable=true] <2 * > [text="好友热播"]',
+          matches:
+            '@[clickable=true][visibleToUser=true][childCount=0] - [text="好友热播" || text="为你推荐"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12721427',
+            'https://i.gkd.li/i/12929620',
+            'https://i.gkd.li/i/13387606',
             'https://i.gkd.li/i/14822579',
           ],
         },
         {
           preKeys: [0],
           key: 1,
-          name: '点击[减少好友热播]',
-          matches: '@[clickable=true] >2 [text="减少好友热播"]',
+          matches:
+            '@[clickable=true] >2 [text="减少好友热播" || text="减少此类推荐"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12721433',
+            'https://i.gkd.li/i/12929619',
+            'https://i.gkd.li/i/13387605',
             'https://i.gkd.li/i/14822576',
           ],
         },
@@ -66,7 +71,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能类-登录授权',
-      desc: '自动点击登录，包括 PC 登录确认、QQ 互联登录确认。',
+      desc: '自动点击登录，包括 PC 登录确认、QQ 互联登录确认',
       fastQuery: true,
       actionMaximum: 1,
       rules: [
@@ -125,35 +130,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/12877215',
             'https://i.gkd.li/i/12919195',
             'https://i.gkd.li/i/15130235',
-          ],
-        },
-      ],
-    },
-    {
-      key: 4,
-      name: '分段广告-好友动态页面"为你推荐"',
-      fastQuery: true,
-      activityIds: [
-        'com.tencent.mobileqq.activity.SplashActivity',
-        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
-      ],
-      rules: [
-        {
-          key: 0,
-          matches: '@ImageView[clickable=true] <2 * > [text="为你推荐"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12929620',
-            'https://i.gkd.li/i/13387606',
-          ],
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches:
-            '@LinearLayout[id!=null][clickable=true] > LinearLayout > [text="减少此类推荐"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12929619',
-            'https://i.gkd.li/i/13387605',
           ],
         },
       ],
@@ -329,7 +305,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@ImageView[clickable=true] <(4,5) * >3 [desc="官方Qzone"] <<n [vid="root"]',
+            '@ImageView[clickable=true][visibleToUser=true][childCount=0] - ViewGroup >2 [desc="官方Qzone"] <<n [vid="root"]',
           snapshotUrls: [
             'https://i.gkd.li/i/15347669',
             'https://i.gkd.li/i/15600523',

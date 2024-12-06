@@ -41,7 +41,7 @@ export default defineGkdApp({
           key: 0,
           activityIds: [
             '.AlipayLogin',
-            'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
+            'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage',
           ],
           matches: [
             '[text="立即更新" || text="马上体验" || text="版本更新"]',
@@ -57,12 +57,11 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '功能类-设置小组件弹窗',
-      desc: '点击关闭',
-      fastQuery: true,
-      activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+      name: '功能类-关闭设置小组件弹窗',
       rules: [
         {
+          fastQuery: true,
+          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
           matches: [
             '[text$="小组件"][text.length<10]',
             '@[clickable=true] > [text="关闭"]',
@@ -77,9 +76,9 @@ export default defineGkdApp({
     {
       key: 4,
       name: '功能类-支付后自动点击完成',
-      fastQuery: true,
       rules: [
         {
+          fastQuery: true,
           activityIds: [
             'com.alipay.android.msp.ui.views.MspContainerActivity',
             'com.alipay.android.phone.businesscommon.ucdp.nfc.activity.NResPageActivity',
@@ -135,7 +134,8 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '功能类-[0元下单权益]弹窗',
+      name: '全屏广告-[0元下单权益]弹窗',
+      desc: '支付完成后出现',
       rules: [
         {
           fastQuery: true,

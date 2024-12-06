@@ -16,10 +16,8 @@ export default defineGkdApp({
         {
           excludeMatches: '[vid="iv_search_back"][visibleToUser=true]',
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/16401878',
-            'https://i.gkd.li/i/16401899', // 防止误触
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/16401878',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/16401899',
         },
       ],
     },

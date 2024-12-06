@@ -36,7 +36,13 @@ export const checkDeprecatedGroupKeys = (apps: RawApp[]) => {
   });
 };
 
-const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [];
+const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
+  {
+    id: 'com.tencent.mobileqq',
+    name: 'QQ',
+    deprecatedKeys: [4],
+  },
+];
 
 const map: Map<string, number[]> = new Map();
 

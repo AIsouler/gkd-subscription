@@ -22,10 +22,8 @@ export default defineGkdApp({
         {
           key: 1,
           matches: '[vid="splash_count_down_view"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/17109105',
-            'https://i.gkd.li/i/17108010', // 全局规则在此误触
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/17109105',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/17108010', // 全局规则在此误触
         },
       ],
     },

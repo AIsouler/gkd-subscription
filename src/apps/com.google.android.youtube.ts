@@ -38,11 +38,10 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '全屏广告',
-      fastQuery: true,
+      name: '全屏广告-会员广告',
       rules: [
         {
-          name: '会员广告',
+          fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
           matches: '@[desc="关闭"] <<n [vid="custom"]',

@@ -32,10 +32,8 @@ export default defineGkdApp({
           },
           excludeMatches: '[text*="跳过"]',
           matches: '[vid="native_container"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15048354',
-            'https://i.gkd.li/i/15048376', // 防止在此页面提前触发规则
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/15048354',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/15048376', // 防止在此页面提前触发规则
         },
       ],
     },

@@ -199,8 +199,8 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14235024',
             'https://i.gkd.li/i/14944631',
             'https://i.gkd.li/i/14232195',
-            'https://i.gkd.li/i/14232195', // 避免误触
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/14232195',
         },
       ],
     },
