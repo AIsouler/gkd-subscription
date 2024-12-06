@@ -8,7 +8,7 @@ export const UPDATE_PROMPT_ORDER = -8; // 更新提示
 export default defineGkdGlobalGroups([
   {
     key: 0,
-    name: '开屏广告',
+    name: '开屏广告-全局',
     order: OPEN_AD_ORDER,
     matchRoot: true,
     fastQuery: true,
@@ -47,7 +47,7 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 1,
-    name: '青少年模式',
+    name: '青少年模式-全局',
     order: YOUTH_MODE_ORDER,
     fastQuery: true,
     matchTime: 10000,
@@ -70,7 +70,7 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 2,
-    name: '更新提示',
+    name: '更新提示-全局',
     order: UPDATE_PROMPT_ORDER,
     fastQuery: true,
     matchTime: 10000,
