@@ -7,15 +7,17 @@ export default defineGkdApp({
     {
       key: 1,
       name: '局部广告-首页底部广告',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
+          fastQuery: true,
+          matchTime: 10000,
           activityIds: 'cn.wps.moffice.main.local.HomeRootActivity',
-          matches: '[vid="phone_message_close_button"]',
-          snapshotUrls: 'https://i.gkd.li/i/17893252',
+          matches:
+            '[vid="phone_message_close_button" || vid="close_home_ad_banner_iv"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17893252',
+            'https://i.gkd.li/i/18047731',
+          ],
         },
       ],
     },
