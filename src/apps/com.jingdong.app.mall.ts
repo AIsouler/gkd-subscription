@@ -31,31 +31,29 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: [
-            'com.jd.lib.message.messagecenter2.MessageCenterMainActivity',
+            'com.jd.lib.message.messagecenter',
             'com.jingdong.app.mall.MainFrameActivity',
-            'com.jd.lib.message.messagecenter.view.activity.MessageCenterMainActivityNew',
           ],
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] <(9,11,16) * > [text="开启消息通知"]',
+            '@ImageView[index=parent.childCount.minus(1)][clickable=true][visibleToUser=true] -n [text="开启消息通知"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13917163',
             'https://i.gkd.li/i/13463618',
             'https://i.gkd.li/i/14692570',
             'https://i.gkd.li/i/17130954',
+            'https://i.gkd.li/i/18060234',
           ],
         },
         {
           key: 1,
-          activityIds:
-            'com.jd.lib.message.messagecenter2.MessageCenterMainActivity',
+          activityIds: 'com.jd.lib.message.messagecenter',
           matches:
             '@[desc="关闭按钮"][clickable=true] + [text^="打开系统通知"]',
           snapshotUrls: 'https://i.gkd.li/i/15228909',
         },
         {
           key: 2,
-          activityIds:
-            'com.jd.lib.message.messagecenter2.MessageCenterMainActivity',
+          activityIds: 'com.jd.lib.message.messagecenter',
           matches: '@[desc="关闭按钮"] - LinearLayout > [text="开启消息通知"]',
           snapshotUrls: 'https://i.gkd.li/i/17912519',
         },
