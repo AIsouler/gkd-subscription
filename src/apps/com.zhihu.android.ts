@@ -95,8 +95,9 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
+          activityIds: '.app.ui.activity.MainActivity',
           matches: ['[text$="内容推送"]', '[vid="btn_close"]'],
-          snapshotUrls: 'https://i.gkd.li/i/14917866',
+          snapshotUrls: 'https://i.gkd.li/i/18057057',
         },
       ],
     },
