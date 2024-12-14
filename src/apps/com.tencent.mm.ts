@@ -290,8 +290,8 @@ export default defineGkdApp({
           activityIds: '.ui.LauncherUI',
           matches: '@[clickable=true] >(1,2) [text="转文字"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/14497389',
-            'https://i.gkd.li/i/14538322',
+            'https://i.gkd.li/i/18135054',
+            'https://i.gkd.li/i/18135057',
           ],
         },
       ],
