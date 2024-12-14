@@ -201,28 +201,27 @@ export default defineGkdApp({
       key: 8,
       name: '功能类-自动领红包',
       desc: '自己发的红包、专属红包、口令红包、私聊红包不领',
-      activityIds: [
-        'com.tencent.mobileqq.activity.SplashActivity',
-        'cooperation.qwallet.plugin.QWalletToolFragmentActivity',
-      ],
       rules: [
         {
           key: 0,
           fastQuery: true,
+          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
           matches:
-            'ImageView < * < FrameLayout +2 * >3 TextView[text*="红包"] - @ViewGroup[childCount=5] > TextView[text!="已领取"] <<n [vid="root"]',
+            'ImageView[childCount=0] < RelativeLayout < FrameLayout +2 LinearLayout >3 @ViewGroup[clickable=true][childCount=5][getChild(3).text!="已领取"] + TextView[text="拼手气红包"]',
           snapshotUrls: 'https://i.gkd.li/i/14221309',
         },
         {
           preKeys: [0],
           key: 1,
-          matches: '@[desc="拆红包"] - RelativeLayout > [text!=null]',
+          activityIds: 'cooperation.qwallet.plugin.QWalletToolFragmentActivity',
+          matches: '[desc="拆红包"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/14221242',
         },
         {
           preKeys: [1],
           key: 2,
           fastQuery: true,
+          activityIds: 'cooperation.qwallet.plugin.QWalletToolFragmentActivity',
           matches: '@[desc="返回"] + [text="红包记录"]',
           snapshotUrls: 'https://i.gkd.li/i/14221279',
         },
