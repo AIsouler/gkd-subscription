@@ -10,7 +10,6 @@ export default defineGkdGlobalGroups([
     key: 0,
     name: '开屏广告-全局',
     order: OPEN_AD_ORDER,
-    matchRoot: true,
     fastQuery: true,
     matchTime: 10000,
     actionMaximum: 1,
