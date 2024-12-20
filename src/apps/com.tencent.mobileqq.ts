@@ -71,42 +71,45 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能类-登录授权',
-      desc: '自动点击登录，包括 PC 登录确认、QQ 互联登录确认',
+      desc: '自动点击登录',
       fastQuery: true,
       actionMaximum: 1,
       rules: [
         {
           key: 1,
-          name: '点击登录',
           activityIds: [
             'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
-            'com.tencent.mobileqq.activity.DevlockQuickLoginActivity',
-            'com.tencent.mobileqq.activity.DevLockQuickVerifyActivity',
+            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
           ],
           matches:
-            'Button[text*="登录"][clickable=true][visibleToUser=true][text.length<10]',
+            'Button[text="登录" || text="同意"][clickable=true][visibleToUser=true]',
           snapshotUrls: [
-            'https://i.gkd.li/i/13623520',
-            'https://i.gkd.li/i/12789287',
-            'https://i.gkd.li/i/13063027',
-            'https://i.gkd.li/i/13166314',
+            'https://i.gkd.li/i/14752498',
+            'https://i.gkd.li/i/18207086',
           ],
         },
         {
           key: 2,
-          name: '点击同意',
           activityIds:
-            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
-          matches: 'Button[text="同意"][clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/14752498',
+            'com.tencent.biz.pubaccount.api.impl.PublicAccountBrowserImpl',
+          matches:
+            '@[clickable=true][visibleToUser=true][text="登录"] <<n [vid="webview"]',
+          snapshotUrls: 'https://i.gkd.li/i/18207069',
         },
         {
-          preKeys: [2],
-          name: '点击确认',
-          activityIds:
+          preKeys: [1, 2],
+          activityIds: [
             'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
-          matches: 'Button[text="确认"]',
-          snapshotUrls: 'https://i.gkd.li/i/14752519',
+            'com.tencent.biz.pubaccount.api.impl.PublicAccountBrowserImpl',
+          ],
+          anyMatches: [
+            'Button[text="确认"][clickable=true][visibleToUser=true]',
+            '@[clickable=true][visibleToUser=true][text="我知道了"] <<n [vid="webview"]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/14752519',
+            'https://i.gkd.li/i/18206793',
+          ],
         },
       ],
     },
