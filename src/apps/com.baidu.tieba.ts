@@ -36,7 +36,7 @@ export default defineGkdApp({
           key: 0,
           activityIds: '.pb.pb.main.PbActivity',
           matches:
-            '@[clickable=true][vid="obfuscated"][visibleToUser=true] <(1,2) RelativeLayout <(1,4) RelativeLayout[childCount>1] >(3,4) [text="广告"]',
+            '@[clickable=true][visibleToUser=true] <(1,2) RelativeLayout <(1,4) RelativeLayout[childCount>1] >(3,4) [text="广告"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16595124',
             'https://i.gkd.li/i/16596297',
@@ -62,8 +62,11 @@ export default defineGkdApp({
           key: 2,
           activityIds: '.tblauncher.MainTabActivity',
           matches:
-            '@[clickable=true][vid="obfuscated"][visibleToUser=true] < LinearLayout <4 RelativeLayout +3 LinearLayout >4 [text="小游戏"]',
-          snapshotUrls: 'https://i.gkd.li/i/17943902',
+            '@ImageView[childCount=0][clickable=true][visibleToUser=true] < LinearLayout[childCount=1] <4 RelativeLayout +3 LinearLayout >4 [text="小游戏"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17943902',
+            'https://i.gkd.li/i/18217417',
+          ],
         },
       ],
     },
@@ -218,7 +221,7 @@ export default defineGkdApp({
           key: 1,
           activityIds: ['.tblauncher.MainTabActivity', '.forum.ForumActivity'],
           matches:
-            '@ImageView[clickable=true][visibleToUser=true][vid="obfuscated"] - [text="你可能感兴趣的吧" || text^="本吧的人都在逛"]',
+            '@ImageView[childCount=0][clickable=true][visibleToUser=true] - [text="你可能感兴趣的吧" || text^="本吧的人都在逛"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16914357',
             'https://i.gkd.li/i/17944680',
