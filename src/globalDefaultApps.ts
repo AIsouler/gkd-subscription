@@ -24,7 +24,7 @@ export const blackListAppIDs: string[] = [
   'com.android.calendar', // 日历
   'com.xiaomi.smarthome', // 米家
   'com.xiaomi.scanner', // 小爱视觉
-  'com.xiaomi.shop2', // 小米商城
+  'com.xiaomi.shop', // 小米商城
 
   // 第三方应用
   'com.tencent.mm', // 微信
