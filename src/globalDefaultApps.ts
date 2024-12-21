@@ -22,6 +22,9 @@ export const blackListAppIDs: string[] = [
   'com.duokan.phone.remotecontroller', // 万能遥控
   'com.mfashiongallery.emag', // 小米画报
   'com.android.calendar', // 日历
+  'com.xiaomi.smarthome', // 米家
+  'com.xiaomi.scanner', // 小爱视觉
+  'com.xiaomi.shop2', // 小米商城
 
   // 第三方应用
   'com.tencent.mm', // 微信
@@ -117,6 +120,12 @@ export const blackListAppIDs: string[] = [
   'com.omarea.vtools', // Scene
   'deltazero.amarok', // Amarok 更新提示在 https://i.gkd.li/i/17812411 误触
   'com.sixbugs.bujuan', // BuJuan
+  'rikka.appops', // App Ops
+  'cn.wps.moffice_eng', // WPS Office
+  'main.smart.HY', // 公交e出行
+  'com.hpbr.bosszhipin', // BOSS直聘
+  'pro.easybox.open', // EasyBox
+  'com.music.moment', // 音乐时刻
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
@@ -135,7 +144,6 @@ function filterAppsByGroup(apps: any[], groupNamePrefix: string): string[] {
 // 开屏广告黑名单
 export const openAdBlackListAppIDs = new Set([
   ...blackListAppIDs,
-  'com.taptap', // TapTap
   'bin.mt.plus', // MT管理器
   ...filterAppsByGroup(apps, '开屏广告'),
 ]);
@@ -158,6 +166,15 @@ export const yongBlackListAppIDs = new Set([
   'com.sdu.didi.psnger', // 滴滴出行
   'com.sankuai.meituan', // 美团
   'com.taobao.idlefish', // 闲鱼
+  'com.tencent.mobileqq', // QQ
+  'com.alibaba.android.rimet', // 钉钉
+  'com.taptap', // TapTap
+  'com.coolapk.market', // 酷安
+  'com.xunlei.downloadprovider', // 迅雷
+  'com.taobao.taobao', // 淘宝
+  'com.xingin.xhs', // 小红书
+  'com.ct.client', // 中国电信
+  'me.ele', // 饿了么
   ...filterAppsByGroup(apps, '青少年模式'),
 ]);
 
