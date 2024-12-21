@@ -14,7 +14,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          excludeActivityIds: '2.plugin.PluginRootActivity',
+          excludeActivityIds: 'com.xiaomi.shop2.plugin.PluginRootActivity',
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/18218380',
           excludeSnapshotUrls: 'https://i.gkd.li/i/18218463',
