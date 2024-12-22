@@ -126,6 +126,7 @@ export const blackListAppIDs: string[] = [
   'com.hpbr.bosszhipin', // BOSS直聘
   'pro.easybox.open', // EasyBox
   'com.music.moment', // 音乐时刻
+  'com.quark.browser', // 夸克浏览器 开屏广告误触 https://i.gkd.li/i/18221460
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
