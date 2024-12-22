@@ -5,6 +5,22 @@ export default defineGkdApp({
   name: '知乎',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          fastQuery: true,
+          matches: '[vid="btn_skip"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18221451',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/18221225',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '分段广告-信息流广告',
       desc: '点击关闭-点击内容不感兴趣',
