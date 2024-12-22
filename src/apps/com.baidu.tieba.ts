@@ -198,27 +198,12 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '局部广告-帖子、感兴趣的吧推广',
-      desc: '关闭首页、吧内游戏推广帖子和感兴趣的吧推广',
-      fastQuery: true,
+      name: '局部广告-贴吧推广',
+      desc: '关闭首页、吧内其他贴吧的推广',
       rules: [
         {
-          key: 0,
-          activityIds: ['.forum.ForumActivity', '.tblauncher.MainTabActivity'],
-          // 防止误触标题以“游戏”开头的帖子，此页面推广帖子和正常帖子节点没有区别；[childCount=2]区分是否在热门页面
-          excludeMatches: 'RelativeLayout[childCount=2] > [text="热门"]',
-          matches:
-            '@ImageView[clickable=true][visibleToUser=true] < LinearLayout <4 RelativeLayout + FrameLayout > [text^="游戏"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/16828309',
-            'https://i.gkd.li/i/16828230',
-            'https://i.gkd.li/i/16828318',
-            'https://i.gkd.li/i/16828401',
-            'https://i.gkd.li/i/16828436',
-          ],
-        },
-        {
           key: 1,
+          fastQuery: true,
           activityIds: ['.tblauncher.MainTabActivity', '.forum.ForumActivity'],
           matches:
             '@ImageView[childCount=0][clickable=true][visibleToUser=true] - [text="你可能感兴趣的吧" || text^="本吧的人都在逛"]',
