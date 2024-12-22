@@ -198,7 +198,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '局部广告-贴吧推广',
+      name: '局部广告-感兴趣的吧推广',
       desc: '关闭首页、吧内其他贴吧的推广',
       rules: [
         {
