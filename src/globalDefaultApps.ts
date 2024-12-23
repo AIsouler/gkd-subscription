@@ -176,6 +176,7 @@ export const yongBlackListAppIDs = new Set([
   'com.xingin.xhs', // 小红书
   'com.ct.client', // 中国电信
   'me.ele', // 饿了么
+  'com.tencent.qqmusic', // QQ音乐
   ...filterAppsByGroup(apps, '青少年模式'),
 ]);
 
