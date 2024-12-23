@@ -11,22 +11,27 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
           activityIds: '.activity.AppStarterActivity',
-          matches: '@ImageView[clickable=true] - [text="广告"]',
+          matches:
+            '@ImageView[clickable=true] - [text="广告"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17450309',
         },
         {
           key: 1,
           fastQuery: true,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
           activityIds: '.activity.AppStarterActivity',
-          matches: '@[clickable=true] > [text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/i/17459576',
+          matches: '@[clickable=true] > [text="广告"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17459576',
+            'https://i.gkd.li/i/18227243',
+          ],
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.activity.AppStarterActivity',
+          matches: '[text="广告 | 关闭"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18227204',
         },
       ],
     },
@@ -38,7 +43,7 @@ export default defineGkdApp({
           key: 0,
           matchTime: 10000,
           activityIds: [
-            'com.tencent.qqmusic.activity.TranslucentWebViewActivity',
+            '.activity.TranslucentWebViewActivity',
             '.activity.AppStarterActivity',
           ],
           matches:
@@ -64,7 +69,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
+          activityIds: '.activity.AppStarterActivity',
           matches: '[text="抢先体验"] -2 [text="不再提醒"]',
           snapshotUrls: 'https://i.gkd.li/i/13178485',
         },
@@ -79,7 +84,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.tencent.qqmusiccommon.hybrid.HybridViewActivity',
+          activityIds: 'common.hybrid.HybridViewActivity',
           matches: '@[desc="关闭按钮"] <3 * > [desc^="看广告"]',
           snapshotUrls: 'https://i.gkd.li/i/13806773',
         },
@@ -94,7 +99,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
+          activityIds: '.activity.AppStarterActivity',
           matches: '@[vid="close_btn"] - * > [text*="好评"]',
           snapshotUrls: 'https://i.gkd.li/i/14881903',
         },
@@ -106,8 +111,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.tencent.qqmusic.business.playernew.view.NewPlayerActivity',
+          activityIds: '.business.playernew.view.NewPlayerActivity',
           matches: ['[text$="即将进入免费畅听模式"]', '[text="取消"]'],
           snapshotUrls: 'https://i.gkd.li/i/16358422',
         },
