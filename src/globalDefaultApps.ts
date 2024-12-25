@@ -127,6 +127,8 @@ export const blackListAppIDs: string[] = [
   'pro.easybox.open', // EasyBox
   'com.music.moment', // 音乐时刻
   'com.quark.browser', // 夸克浏览器 开屏广告误触 https://i.gkd.li/i/18221460
+  'com.fongmi.android.tv', // OK影视
+  'com.github.tvbox.osc', // TVBox
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
