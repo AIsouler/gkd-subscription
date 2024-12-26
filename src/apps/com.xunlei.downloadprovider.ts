@@ -21,8 +21,8 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/15048443',
             'https://i.gkd.li/i/15048416',
-            'https://i.gkd.li/i/16388942', // 防止误触
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/16388942', // 防止误触
         },
         {
           key: 1,
@@ -78,14 +78,12 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           activityIds: '.frame.MainTabActivity',
-          matches:
-            '[vid="close" || vid="home_flow_item_close_iv"][clickable=true][visibleToUser=true]',
+          matches: '@[vid="close"] - [text$="领取"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/15048352',
-            'https://i.gkd.li/i/15048355',
             'https://i.gkd.li/i/15048357',
-            'https://i.gkd.li/i/17376753',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/18250812',
         },
         {
           key: 1,
@@ -93,6 +91,17 @@ export default defineGkdApp({
           activityIds: '.search.ui.search.SearchOperateActivity',
           matches: '[vid="search_banner_ad_close"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17725350',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.frame.MainTabActivity',
+          matches:
+            '[vid="home_flow_item_close_iv" || vid="ad_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17376753',
+            'https://i.gkd.li/i/18250890',
+          ],
         },
       ],
     },
@@ -109,6 +118,24 @@ export default defineGkdApp({
           activityIds: 'com.xunlei.uikit.activity.TransformActivity',
           matches: ['[text="是否打开系统通知"]', '[vid="btn_close"]'],
           snapshotUrls: 'https://i.gkd.li/i/15322046',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '分段广告-卡片广告',
+      fastQuery: true,
+      activityIds: '.frame.MainTabActivity',
+      rules: [
+        {
+          key: 1,
+          matches: '[vid="btn_ad_feedback"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18250917',
+        },
+        {
+          preKeys: [1],
+          matches: '[text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18250933',
         },
       ],
     },
