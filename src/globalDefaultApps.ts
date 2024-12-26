@@ -129,6 +129,8 @@ export const blackListAppIDs: string[] = [
   'com.quark.browser', // 夸克浏览器 开屏广告误触 https://i.gkd.li/i/18221460
   'com.fongmi.android.tv', // OK影视
   'com.github.tvbox.osc', // TVBox
+  'com.junkfood.seal', // Seal
+  'com.junkfood.seal.preview', // Seal Preview
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
