@@ -29,7 +29,6 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          action: 'back',
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches: [
             '[text="版本升级"][visibleToUser=true]',
