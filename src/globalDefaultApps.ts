@@ -98,7 +98,7 @@ export const blackListAppIDs: string[] = [
   'com.mmbox.xbrowser.pro', // X浏览器Google Play版
   'com.mycompany.app.soulbrowser', // soul浏览器
   'com.bilibili.app.in', // bilibili
-  'com.alicloud.databox', // 阿里云盘 开屏广告在 https://i.gkd.li/i/15144565 误触导致自动签到规则执行中断
+  'com.alicloud.databox', // 阿里云盘
   'io.nichijou.flutter.mikan', // 蜜柑计划
   'xyz.nextalone.nagram', // Nagram
   'com.google.android.apps.authenticator2', // Authenticator
@@ -108,7 +108,7 @@ export const blackListAppIDs: string[] = [
   'com.android.chrome', // Chrome
   'hello.litiaotiao.app', // 李跳跳
   'com.follow.clash', // FlClash
-  'com.google.android.youtube', // YouTube 开屏广告在 https://i.gkd.li/i/15765176 误触
+  'com.google.android.youtube', // YouTube
   'com.xunmeng.pinduoduo', // 拼多多
   'com.one.my_ai', // 艾跳跳
   'com.cnspeedtest.globalspeed', // 全球网测
