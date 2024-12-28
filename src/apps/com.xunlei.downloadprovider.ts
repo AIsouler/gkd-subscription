@@ -95,12 +95,16 @@ export default defineGkdApp({
         {
           key: 2,
           fastQuery: true,
-          activityIds: '.frame.MainTabActivity',
+          activityIds: [
+            '.frame.MainTabActivity',
+            '.download.center.DownloadCenterActivity',
+          ],
           matches:
             '[vid="home_flow_item_close_iv" || vid="ad_close"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/17376753',
             'https://i.gkd.li/i/18250890',
+            'https://i.gkd.li/i/18265938',
           ],
         },
       ],
