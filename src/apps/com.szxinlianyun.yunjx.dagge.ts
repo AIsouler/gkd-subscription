@@ -63,9 +63,9 @@ export default defineGkdApp({
       key: 2,
       name: '局部广告-卡片广告',
       matchRoot: true,
-      forcedTime: 10000,
       matchTime: 10000,
       actionMaximum: 1,
+      forcedTime: 10000,
       rules: [
         {
           key: 1,
@@ -75,13 +75,14 @@ export default defineGkdApp({
             'com.janz.music.ui.SearchActivity',
           ],
           matches:
-            'ImageView[childCount=0] < @ViewGroup[clickable=true][childCount=1] - ViewGroup[childCount=2] > [text^="立即" || text="继续看" || text="扭一扭"] <<n [vid="ksad_container"]',
+            'ImageView[childCount=0] < @ViewGroup[clickable=true][childCount=1] - ViewGroup[childCount=2] > [text^="立即" || text="继续看" || text="扭一扭" || text="摇一摇"] <<n [vid="ksad_container"]',
           snapshotUrls: [
             'https://i.gkd.li/i/18037248',
             'https://i.gkd.li/i/18037492',
             'https://i.gkd.li/i/18037580',
             'https://i.gkd.li/i/18147892',
             'https://i.gkd.li/i/18147953',
+            'https://i.gkd.li/i/18266262',
           ],
         },
         {
@@ -98,6 +99,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18037523',
             'https://i.gkd.li/i/18148085',
           ],
+        },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: 'com.janz.music.ui.AddViewActivity',
+          matches: '[vid="ksad_ad_dislike"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18266243',
         },
       ],
     },
