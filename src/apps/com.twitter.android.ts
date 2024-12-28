@@ -43,7 +43,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.twitter.tweetdetail.TweetDetailActivity',
-          matches: '[vid="translation_link"][text^="翻译"]',
+          matches: '[vid="translation_link"][text^="翻译"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/14189817',
             'https://i.gkd.li/i/14615911',
