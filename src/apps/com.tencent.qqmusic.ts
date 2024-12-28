@@ -57,6 +57,15 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17459008',
           ],
         },
+        {
+          key: 1,
+          fastQuery: true,
+          matchTime: 10000,
+          activityIds: '.business.playernew.view.NewPlayerActivity',
+          matches:
+            '@ImageView[id=null][childCount=0][visibleToUser=true] < FrameLayout[id=null][childCount=1] <2 FrameLayout[id=null][childCount=6][getChild(2).childCount=4] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/18265539',
+        },
       ],
     },
     {
