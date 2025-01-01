@@ -35,7 +35,7 @@ export default defineGkdApp({
       fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+      activityIds: '.activity.MainActivity',
       rules: [
         {
           key: 0,
@@ -58,10 +58,7 @@ export default defineGkdApp({
         {
           key: 1,
           action: 'back',
-          activityIds: [
-            'com.netease.cloudmusic.activity.MainActivity',
-            'com.netease.cloudmusic.activity.PlayerActivity',
-          ],
+          activityIds: ['.activity.MainActivity', '.activity.PlayerActivity'],
           excludeMatches: '[text="当前场景"]',
           matches: '[vid="dsl_dialog_root"]',
           snapshotUrls: [
@@ -80,7 +77,7 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: 'app',
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          activityIds: '.activity.MainActivity',
           matches:
             'View[childCount=4] > @TextView[index=2][visibleToUser=true] <<n [vid="popLayerWebViewContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/15160018',
@@ -96,8 +93,8 @@ export default defineGkdApp({
           key: 0,
           action: 'back',
           activityIds: [
-            'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
-            'com.netease.cloudmusic.activity.MainActivity',
+            '.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+            '.activity.MainActivity',
             '.activity.PlayListActivity',
           ],
           matches: ['[text="支付宝"]', '[text^="确认协议并"]'],
@@ -116,8 +113,7 @@ export default defineGkdApp({
         {
           key: 1,
           action: 'back',
-          activityIds:
-            'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
+          activityIds: '.music.biz.rn.activity.LayerReactNativeActivity',
           matches: '[text^="邀您开通VIP"]',
           snapshotUrls: 'https://i.gkd.li/i/14956768',
         },
@@ -133,7 +129,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          activityIds: '.activity.MainActivity',
           matches: ['[text*="新版本"]', '[text="近期不再提示"]'],
           snapshotUrls: 'https://i.gkd.li/i/16357369',
         },
@@ -150,21 +146,20 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: 'app',
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          activityIds: '.activity.MainActivity',
           matches: '[vid="adTagView"]',
           snapshotUrls: 'https://i.gkd.li/i/15047096',
         },
         {
           key: 1,
-          activityIds: 'com.netease.cloudmusic.activity.PlayerActivity',
+          activityIds: '.activity.PlayerActivity',
           matches:
             '[vid="iv_ad_close"][clickable=true][visibleToUser=true][focusable=true]',
           snapshotUrls: 'https://i.gkd.li/i/15282417',
         },
         {
           key: 2,
-          activityIds:
-            'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
+          activityIds: '.music.biz.search.activity.SearchActivity',
           matches: '[vid="adCloseIV"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/16385547',
         },
@@ -176,8 +171,8 @@ export default defineGkdApp({
       desc: '点击[关闭]-点击[不感兴趣]',
       fastQuery: true,
       activityIds: [
-        'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
-        'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
+        '.music.biz.comment.activity.CommentActivity',
+        '.music.biz.comment.activity.ReplyCommentActivity2',
       ],
       rules: [
         {
@@ -206,8 +201,7 @@ export default defineGkdApp({
       actionMaximum: 1,
       rules: [
         {
-          activityIds:
-            'com.netease.cloudmusic.module.login.LoginPermissionActivity',
+          activityIds: '.module.login.LoginPermissionActivity',
           matches: '[text="授权登录"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/14830218',
         },

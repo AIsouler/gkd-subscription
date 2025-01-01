@@ -13,9 +13,9 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: [
-            'com.baidu.netdisk.business.guide.dialog.lifeproduct.',
-            'com.baidu.netdisk.ui.MainActivity',
-            'com.baidu.netdisk.ui.Navigate',
+            '.business.guide.dialog.lifeproduct.',
+            '.ui.MainActivity',
+            '.ui.Navigate',
           ],
           matches: '[vid="iv_close"]',
           snapshotUrls: [
@@ -52,7 +52,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.baidu.netdisk.ui.MainActivity',
+          activityIds: '.ui.MainActivity',
           matches:
             '@ImageView[vid="float_btn_close"][visibleToUser=true] < ViewGroup <2 FrameLayout <2 LinearLayout < FrameLayout < LinearLayout < FrameLayout < [vid="content_view"]',
           snapshotUrls: 'https://i.gkd.li/i/14278618',

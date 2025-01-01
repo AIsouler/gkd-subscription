@@ -34,7 +34,7 @@ export default defineGkdApp({
           key: 0,
           activityIds: [
             'com.xiaomi.shop2.activity.MainActivity',
-            'com.xiaomi.shop.plugin.homepage.utils.AdDialog',
+            '.plugin.homepage.utils.AdDialog',
           ],
           matches:
             '@ImageView[clickable=true][childCount=0][index=parent.childCount.minus(1)] <2 LinearLayout < RelativeLayout < [id="android:id/content"]',

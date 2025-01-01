@@ -15,8 +15,8 @@ export default defineGkdApp({
           key: 0,
           name: '点击[安装]/[更新]',
           activityIds: [
-            'com.miui.packageInstaller.NewInstallerPrepareActivity',
-            'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+            '.NewInstallerPrepareActivity',
+            '.ui.InstallPrepareAlertActivity',
           ],
           matches:
             '@FrameLayout[clickable=true] > LinearLayout[childCount=1] > [text^="继续"][text.length=4]',
@@ -29,8 +29,7 @@ export default defineGkdApp({
         {
           // preKeys: [0], 有概率不触发
           name: '点击[完成]',
-          activityIds:
-            'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
+          activityIds: '.ui.normalmode.InstallProgressActivity',
           matches: '[text="完成"]',
           snapshotUrls: 'https://i.gkd.li/i/16487274',
         },
@@ -41,8 +40,7 @@ export default defineGkdApp({
       name: '功能类-放弃开启安全守护',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds:
-        'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
+      activityIds: '.ui.normalmode.InstallProgressActivity',
       rules: [
         {
           key: 0,
@@ -63,7 +61,7 @@ export default defineGkdApp({
       name: '功能类-自动允许应用安装软件',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: 'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+      activityIds: '.ui.InstallPrepareAlertActivity',
       rules: [
         {
           key: 0,
@@ -93,8 +91,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+          activityIds: '.ui.InstallPrepareAlertActivity',
           matches: ['[text$="备案信息"]', '[text="继续安装"]'],
           snapshotUrls: 'https://i.gkd.li/i/17908298',
         },
@@ -105,7 +102,7 @@ export default defineGkdApp({
       name: '功能类-无视风险继续安装',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
+      activityIds: '.NewInstallerPrepareActivity',
       rules: [
         {
           key: 0,

@@ -15,7 +15,7 @@ export default defineGkdApp({
           key: 1,
           name: '会员打折弹窗',
           fastQuery: true,
-          activityIds: 'com.miui.cloudservice.ad.AdPopupActivity',
+          activityIds: '.ad.AdPopupActivity',
           matches: '[vid="ad_popup_close_iv"]',
           snapshotUrls: 'https://i.gkd.li/i/14320937',
         },

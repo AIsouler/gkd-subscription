@@ -85,7 +85,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.xunmeng.pinduoduo.activity.NewPageActivity',
+          activityIds: '.activity.NewPageActivity',
           matches: '[vid="iv_float_window_close"]',
           snapshotUrls: 'https://i.gkd.li/i/14549415',
         },
@@ -100,8 +100,8 @@ export default defineGkdApp({
           key: 0,
           name: '邀请好友弹窗',
           activityIds: [
-            'com.xunmeng.pinduoduo.activity.NewPageMaskActivity',
-            'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+            '.activity.NewPageMaskActivity',
+            '.ui.activity.HomeActivity',
           ],
           matches:
             '@[clickable=true][childCount=0][index=0][text="" || text="关闭弹窗"] < View >(1,2) [text$="拼单成功" || text$="下单成功" ||text$="已支付" || text="待发货"]',

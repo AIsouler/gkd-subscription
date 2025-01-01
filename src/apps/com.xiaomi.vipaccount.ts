@@ -14,7 +14,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.xiaomi.vipaccount.ui.home.page.HomeFrameActivity',
+          activityIds: '.ui.home.page.HomeFrameActivity',
           matches: ['[vid="single_banner"]', '[vid="close"]'],
           snapshotUrls: 'https://i.gkd.li/i/15173207',
         },

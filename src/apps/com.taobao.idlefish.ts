@@ -13,8 +13,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds:
-            'com.taobao.idlefish.maincontainer.activity.MainActivity',
+          activityIds: '.maincontainer.activity.MainActivity',
           matches: ['[text*="开启手机信息权限"]', '[text="取消"]'],
           snapshotUrls: 'https://i.gkd.li/i/13620277',
         },

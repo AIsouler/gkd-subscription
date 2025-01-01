@@ -27,11 +27,11 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: [
-            'me.ele.component.pops2.Pops2MistDialog',
-            'me.ele.component.webcontainer.view.AppUCWebActivity',
-            'me.ele.application.ui.Launcher.LauncherActivity',
-            'me.ele.application.ui.GeneralSettingsActivity',
-            'me.ele.shopdetailv2.ShopDetailV2Activity',
+            '.component.pops2.Pops2MistDialog',
+            '.component.webcontainer.view.AppUCWebActivity',
+            '.application.ui.Launcher.LauncherActivity',
+            '.application.ui.GeneralSettingsActivity',
+            '.shopdetailv2.ShopDetailV2Activity',
           ],
           matches:
             'ViewGroup[childCount=2] > @ImageView[index=1][clickable=true] <<n [id="me.ele:id/id_magex_mistview"]',
@@ -60,10 +60,10 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: [
-            'me.ele.component.pops2.Pops2MistDialog',
-            'me.ele.newbooking.checkout.entrypoint.WMCheckoutActivity',
-            'me.ele.application.ui.Launcher.LauncherActivity',
-            'me.ele.android.emagex.container.EMagexActivity',
+            '.component.pops2.Pops2MistDialog',
+            '.newbooking.checkout.entrypoint.WMCheckoutActivity',
+            '.application.ui.Launcher.LauncherActivity',
+            '.android.emagex.container.EMagexActivity',
           ],
           matches:
             '@ImageView[clickable=true] <2 [vid="id_magex_mistview"][childCount=2]',
@@ -77,7 +77,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
+          activityIds: '.application.ui.Launcher.LauncherActivity',
           matches: 'ViewGroup[clickable=true] - TextView[text="放弃"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13710574',
@@ -95,7 +95,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'me.ele.foodchannel.page.WMChannelNativeActivity',
+          activityIds: '.foodchannel.page.WMChannelNativeActivity',
           matches: [
             '[text*="小调研"]',
             '[vid="iv_cancel"][visibleToUser=true]',
@@ -114,7 +114,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
+          activityIds: '.application.ui.Launcher.LauncherActivity',
           matches:
             'ViewGroup[childCount=9] > @ViewGroup[childCount=0][index=8] <<n [vid="id_magex_mist_view"]',
           snapshotUrls: 'https://i.gkd.li/i/15047795',
@@ -129,7 +129,7 @@ export default defineGkdApp({
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
-          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
+          activityIds: '.application.ui.Launcher.LauncherActivity',
           matches:
             'ViewGroup[childCount=2] > @ViewGroup[childCount=0][clickable=true] <<n [vid="id_magex_mist_view"]',
           snapshotUrls: 'https://i.gkd.li/i/15047819',

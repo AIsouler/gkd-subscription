@@ -42,6 +42,11 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     name: 'QQ',
     deprecatedKeys: [4],
   },
+  {
+    id: 'com.xiaomi.market',
+    name: '小米应用商店',
+    deprecatedKeys: [3],
+  },
 ];
 
 const map: Map<string, number[]> = new Map();

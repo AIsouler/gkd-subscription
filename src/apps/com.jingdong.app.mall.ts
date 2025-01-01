@@ -32,7 +32,7 @@ export default defineGkdApp({
           key: 0,
           activityIds: [
             'com.jd.lib.message.messagecenter',
-            'com.jingdong.app.mall.MainFrameActivity',
+            '.MainFrameActivity',
           ],
           matches:
             '@ImageView[index=parent.childCount.minus(1)][clickable=true][visibleToUser=true] -n [text="开启消息通知"]',

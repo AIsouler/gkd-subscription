@@ -15,8 +15,8 @@ export default defineGkdApp({
       rules: [
         {
           excludeActivityIds: [
-            'com.tencent.mobileqq.activity.ChatActivity', // 在聊天界面禁用
-            'com.tencent.mobileqq.search.activity.UniteSearchActivity', // 在搜索页面禁用
+            '.activity.ChatActivity', // 在聊天界面禁用
+            '.search.activity.UniteSearchActivity', // 在搜索页面禁用
           ],
           excludeMatches: '[vid="root"]', // 在聊天界面禁用，若排除EditText[vid="input"]则滑动消息时会造成误触
           matches: 'TextView[text^="跳过"][text.length<=10][vid!="title"]',
@@ -40,7 +40,7 @@ export default defineGkdApp({
       fastQuery: true,
       activityIds: [
         'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
-        'com.tencent.mobileqq.activity.SplashActivity',
+        '.activity.SplashActivity',
       ],
       rules: [
         {
@@ -122,8 +122,8 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: [
-            'com.tencent.mobileqq.mini.appbrand.ui.AppBrandUI',
-            'com.tencent.mobileqq.activity.miniaio.MiniChatActivity',
+            '.mini.appbrand.ui.AppBrandUI',
+            '.activity.miniaio.MiniChatActivity',
           ],
           matches: [
             '[text="广告"][visibleToUser=true]',
@@ -192,8 +192,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.tencent.mobileqq.activity.TeamWorkDocEditBrowserActivity',
+          activityIds: '.activity.TeamWorkDocEditBrowserActivity',
           matches:
             '@TextView[clickable=true] + * > [visibleToUser=true][text^="使用 APP"] <<n [vid="webview"]',
           snapshotUrls: 'https://i.gkd.li/i/14188983',
@@ -208,7 +207,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches:
             'ImageView[childCount=0] < RelativeLayout < FrameLayout +2 LinearLayout >3 @ViewGroup[clickable=true][childCount=5][getChild(3).text!="已领取"] + TextView[text="拼手气红包"]',
           snapshotUrls: 'https://i.gkd.li/i/14221309',
@@ -237,7 +236,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mobileqq.activity.QQBrowserActivity',
+          activityIds: '.activity.QQBrowserActivity',
           matches: [
             'TextView[text="入群申请中"][visibleToUser=true]',
             'TextView[text="关闭"][visibleToUser=true]',
@@ -259,7 +258,7 @@ export default defineGkdApp({
             left: 'width * 0.9534',
             top: 'width * 0.0805',
           },
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches:
             'LinearLayout[childCount=1] > FrameLayout[childCount=1] > FrameLayout[childCount=1] > @View[visibleToUser=true][childCount=0] <<n [vid="root"]',
           snapshotUrls: [
@@ -269,28 +268,28 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches:
             '@[desc="关闭"][clickable=true][visibleToUser=true] <2 RelativeLayout[childCount=2] >2 TextView[text^="Hi，"]',
           snapshotUrls: 'https://i.gkd.li/i/15272076',
         },
         {
           key: 3,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches:
             'FrameLayout[childCount=7] > FrameLayout[childCount=2] > @ImageView[childCount=0] <<n [vid="root"]',
           snapshotUrls: 'https://i.gkd.li/i/15388608',
         },
         {
           key: 4,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches:
             '@[desc="关闭"][clickable=true][visibleToUser=true] <2 RelativeLayout[childCount=2] >2 TextView[text*="限时"][text.length<12]',
           snapshotUrls: 'https://i.gkd.li/i/15514151',
         },
         {
           key: 5,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: '.activity.SplashActivity',
           matches: '@ImageView[clickable=true] - [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/i/16318421',
         },
@@ -302,7 +301,7 @@ export default defineGkdApp({
       fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      activityIds: '.activity.SplashActivity',
       rules: [
         {
           key: 0,
@@ -331,7 +330,7 @@ export default defineGkdApp({
       key: 12,
       name: '分段广告-动态页广告',
       fastQuery: true,
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      activityIds: '.activity.SplashActivity',
       rules: [
         {
           key: 0,
@@ -369,9 +368,9 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           activityIds: [
-            'com.tencent.mobileqq.profilecard.activity.FriendProfileCardActivity',
-            'com.tencent.mobileqq.activity.ChatActivity',
-            'com.tencent.mobileqq.activity.SplashActivity',
+            '.profilecard.activity.FriendProfileCardActivity',
+            '.activity.ChatActivity',
+            '.activity.SplashActivity',
           ],
           matches:
             'FrameLayout[childCount=2] >2 FrameLayout[childCount=2] >3 FrameLayout[childCount=2] > [text="跳过" || text="关闭"][clickable=true]',

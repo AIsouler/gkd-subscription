@@ -10,7 +10,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.zhaopin.social.homepage.ZSC_MainTabActivity',
+          activityIds: '.homepage.ZSC_MainTabActivity',
           matches: '[vid="rl_banner_close"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/15130818',
         },

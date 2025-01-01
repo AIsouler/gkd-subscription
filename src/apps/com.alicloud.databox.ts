@@ -12,8 +12,8 @@ export default defineGkdApp({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: [
-        'com.alicloud.databox.MainActivity',
-        'com.alicloud.databox.navigation.NavigationFragmentContainerActivity',
+        '.MainActivity',
+        '.navigation.NavigationFragmentContainerActivity',
       ],
       rules: [
         {
@@ -57,7 +57,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.alicloud.databox.MainActivity',
+          activityIds: '.MainActivity',
           matches:
             '[text="允许后台自动备份"] < * +3 @TextView[clickable=true][index=parent.childCount.minus(1)] <<n [vid="webContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/14414446',
@@ -79,8 +79,7 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          activityIds:
-            'com.alicloud.databox.webview.jsbridge.BridgeWebViewActivity',
+          activityIds: '.webview.jsbridge.BridgeWebViewActivity',
           matches: [
             'TextView[text="登录与授权"]',
             '@[childCount=0][text="允许"] <<n [vid="webContainer"]',
@@ -100,7 +99,7 @@ export default defineGkdApp({
         {
           key: 0,
           action: 'back',
-          activityIds: 'com.alicloud.databox.MainActivity',
+          activityIds: '.MainActivity',
           matches:
             'WebView[text!=null] > View[childCount=1] > View[childCount=1] > View[childCount=3] > @TextView[index=1][childCount=0][visibleToUser=true] <<n [vid="webContainer"]',
           snapshotUrls: [
@@ -111,7 +110,7 @@ export default defineGkdApp({
         {
           key: 1,
           action: 'back',
-          activityIds: 'com.alicloud.databox.MainActivity',
+          activityIds: '.MainActivity',
           matches:
             'View[text=""] > @[visibleToUser=true][text*="自动备份"] <<n [vid="webContainer"]',
           snapshotUrls: [

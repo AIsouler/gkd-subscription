@@ -11,7 +11,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.android.bankabc.MainActivity',
+      activityIds: '.MainActivity',
       rules: [
         {
           key: 0,
@@ -65,7 +65,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.android.bankabc.MainActivity',
+          activityIds: '.MainActivity',
           matches: '[vid="iv_ad_skip"]',
           snapshotUrls: 'https://i.gkd.li/i/16355928',
         },

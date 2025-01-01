@@ -15,8 +15,8 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: [
-            'com.android.thememanager.ThemeResourceTabActivity',
-            'com.android.thememanager.ThemeResourceProxyTabActivity',
+            '.ThemeResourceTabActivity',
+            '.ThemeResourceProxyTabActivity',
           ],
           matches: '[vid="close"]',
           snapshotUrls: [
@@ -37,8 +37,8 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: [
-            'com.android.thememanager.ThemeResourceTabActivity',
-            'com.android.thememanager.ThemeResourceProxyTabActivity',
+            '.ThemeResourceTabActivity',
+            '.ThemeResourceProxyTabActivity',
           ],
           matches: '[vid="cancel"][desc="关闭"]',
           snapshotUrls: [

@@ -60,7 +60,7 @@ export default defineGkdApp({
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
-          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          activityIds: '.frame.MainTabActivity',
           matches: '[vid="close_btn"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16388890',

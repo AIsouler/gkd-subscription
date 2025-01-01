@@ -15,7 +15,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.xiaomi.market.ui.FloatWebActivity',
+          activityIds: '.ui.FloatWebActivity',
           matches: '@Button[clickable=true][text="关闭"] <<n [vid="webview"]',
           snapshotUrls: 'https://i.gkd.li/i/16323123',
         },
@@ -30,24 +30,9 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.xiaomi.market.ui.UpdateListActivity',
+          activityIds: '.ui.UpdateListActivity',
           matches: '[vid="dialog_cancel"]',
           snapshotUrls: 'https://i.gkd.li/i/14814456',
-        },
-      ],
-    },
-    {
-      key: 3,
-      name: '局部广告-个性化推荐卡片',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.xiaomi.market.business_ui.main.MarketTabActivity',
-          matches: '[id="com.xiaomi.market:id/close_float_recommend"]',
-          snapshotUrls: 'https://i.gkd.li/i/13624971',
         },
       ],
     },
@@ -60,7 +45,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.xiaomi.market.ui.UpdateListActivity',
+          activityIds: '.ui.UpdateListActivity',
           matches: '@[clickable=true] > [text^="查看全部升级"]',
           snapshotUrls: 'https://i.gkd.li/i/14782814',
         },
