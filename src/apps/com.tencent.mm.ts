@@ -7,23 +7,14 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段广告-朋友圈广告',
-      desc: '点击广告卡片右上角,直接关闭/出现菜单,确认关闭',
       fastQuery: true,
-      activityIds: [
-        'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
-        'com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI',
-        'com.tencent.mm.plugin.profile.ui.ContactInfoUI',
-      ],
+      activityIds: '.plugin.sns.ui.improve.ImproveSnsTimelineUI',
       rules: [
         {
           key: 0,
           name: '点击广告卡片右上角',
           matches: '[text="广告"][clickable=true][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14647413',
-            'https://i.gkd.li/i/15242828',
-            'https://i.gkd.li/i/16568338',
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/15242828',
         },
 
         // 预留key
@@ -32,11 +23,14 @@ export default defineGkdApp({
           preKeys: [0],
           key: 25,
           name: '点击[关闭]',
-          matches: '[text^="关闭"][clickable=true]',
+          anyMatches: [
+            '[text^="关闭"][clickable=true][visibleToUser=true]',
+            '@[clickable=true] > [text^="关闭"][clickable=false][visibleToUser=true]',
+          ],
           snapshotUrls: [
-            'https://i.gkd.li/i/12907642', // text="关闭该广告"
             'https://i.gkd.li/i/13926578', // text="关闭广告"
-            'https://i.gkd.li/i/15242827',
+            'https://i.gkd.li/i/15242827', // text="关闭该广告"
+            'https://i.gkd.li/i/18284569', // @[clickable=true] > [text^="关闭"][clickable=false]
           ],
         },
       ],
@@ -66,10 +60,10 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       activityIds: [
-        'com.tencent.mm.plugin.base.stub.UIEntryStub',
-        'com.tencent.mm.ui.LauncherUI',
-        'com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI',
-        'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
+        '.plugin.base.stub.UIEntryStub',
+        '.ui.LauncherUI',
+        '.plugin.webview.ui.tools.MMWebViewUI',
+        '.plugin.webview.ui.tools.SDKOAuthUI',
       ],
       rules: [
         {
@@ -133,8 +127,8 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: [
-            'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
-            'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
+            '.plugin.gallery.ui.AlbumPreviewUI',
+            '.plugin.gallery.ui.ImagePreviewUI',
           ],
           matches:
             '@ImageButton[desc="未选中,原图,复选框"][visibleToUser=true] + [text="原图"]',
@@ -157,8 +151,8 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: [
-            'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-            'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+            '.plugin.appbrand.ui.AppBrandUI',
+            '.plugin.appbrand.launching.AppBrandLaunchProxyUI',
           ],
           actionDelay: 800, // 过早点击首次大概率跳不过
           matches: [
@@ -199,7 +193,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
+          activityIds: '.framework.app.UIPageFragmentActivity',
           matches:
             '[vid="kinda_button_impl_wrapper"][desc="完成" || desc="返回商家"]',
           snapshotUrls: [
@@ -217,7 +211,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mm.plugin.webwx.ui.WebWXUnlockUI',
+          activityIds: '.plugin.webwx.ui.WebWXUnlockUI',
           matches: '[text="解锁"]',
           snapshotUrls: 'https://i.gkd.li/i/14490116',
         },
@@ -232,7 +226,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI',
+          activityIds: '.plugin.webview.ui.tools.MMWebViewUI',
           matches:
             '@TextView[clickable=true] + * > [visibleToUser=true][text^="使用 APP"] <<n [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/14533286',
@@ -247,7 +241,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
+          activityIds: '.framework.app.UIPageFragmentActivity',
           matches:
             'ViewGroup + ViewGroup > ViewGroup > [vid="kinda_button_impl_wrapper"][desc="支付"]',
           snapshotUrls: [
@@ -268,7 +262,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+          activityIds: '.plugin.appbrand.ui.AppBrandUI',
           excludeMatches: '[text="跳过"][visibleToUser=true]', // 防止提前触发
           matches:
             '@ImageView[visibleToUser=true][childCount=0][text=null] < FrameLayout[childCount=1] < FrameLayout[childCount=1] <2 FrameLayout[childCount=2] - FrameLayout >4 [text="广告"]',
