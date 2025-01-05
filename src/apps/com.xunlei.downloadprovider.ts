@@ -58,8 +58,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          actionMaximum: 1,
-          resetMatch: 'app',
           activityIds: '.frame.MainTabActivity',
           matches: '[vid="close_btn"][visibleToUser=true]',
           snapshotUrls: [
@@ -140,6 +138,18 @@ export default defineGkdApp({
           preKeys: [1],
           matches: '[text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/18250933',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '评价提示',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.frame.MainTabActivity',
+          matches: '@[vid="iv_close"] -3 [text="五星好评"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18310367',
         },
       ],
     },
