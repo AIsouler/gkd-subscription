@@ -81,8 +81,10 @@ export default defineGkdApp({
             'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
             'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
           ],
-          matches:
+          matches: [
+            '[text="登录确认" || text="你的QQ头像和昵称信息"][visibleToUser=true]',
             'Button[text="登录" || text="同意"][clickable=true][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/14752498',
             'https://i.gkd.li/i/18207086',
@@ -93,7 +95,7 @@ export default defineGkdApp({
           activityIds:
             'com.tencent.biz.pubaccount.api.impl.PublicAccountBrowserImpl',
           matches:
-            '@[clickable=true][visibleToUser=true][text="登录"] <<n [vid="webview"]',
+            'WebView[text="登录确认"] >4 @[clickable=true][visibleToUser=true][text="登录"] <<n [vid="webview"]',
           snapshotUrls: 'https://i.gkd.li/i/18207069',
         },
         {
