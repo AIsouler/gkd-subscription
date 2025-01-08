@@ -121,36 +121,26 @@ export default defineGkdApp({
       key: 3,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
-          key: 0,
-          activityIds: '.app.ui.activity.MainActivity',
-          matches: '[id="com.zhihu.android:id/dismiss"]',
-          snapshotUrls: 'https://i.gkd.li/i/12707676',
-        },
-        {
           key: 1,
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
           activityIds: '.app.ui.activity.AdAlphaVideoActivity',
-          matches: '[vid="tv_ad_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/14648128',
+          matches: '[vid="tv_ad_close"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18343818',
         },
         {
           key: 2,
+          fastQuery: true,
+          actionMaximum: 1,
+          resetMatch: 'app',
           activityIds: '.app.ui.activity.MainActivity',
-          matches: '[id="com.zhihu.android:id/floating_close_btn"]',
-          snapshotUrls: 'https://i.gkd.li/i/12647421',
-        },
-        {
-          key: 3,
-          action: 'clickCenter',
-          activityIds: '.creatorcenter.CreatorCenterHostActivity',
-          matches:
-            'View[text="关闭"] > @[clickable=true][text="关闭"] <<n [vid="webview_bg"]',
-          snapshotUrls: 'https://i.gkd.li/i/14955183',
-        },
+          matches: '[vid="floating_close_btn"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18343974',
+        }, // 3
       ],
     },
     {
