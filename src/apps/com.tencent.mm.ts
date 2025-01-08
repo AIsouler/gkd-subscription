@@ -57,20 +57,15 @@ export default defineGkdApp({
       name: '功能类-自动授权登录',
       desc: '自动允许使用头像昵称等',
       fastQuery: true,
-      matchTime: 10000,
       actionMaximum: 1,
-      activityIds: [
-        '.plugin.base.stub.UIEntryStub',
-        '.ui.LauncherUI',
-        '.plugin.webview.ui.tools.MMWebViewUI',
-        '.plugin.webview.ui.tools.SDKOAuthUI',
-      ],
       rules: [
         {
+          activityIds: [
+            '.plugin.webview.ui.tools.MMWebViewUI',
+            '.plugin.webview.ui.tools.SDKOAuthUI',
+          ],
           matches: ['[text$="你的昵称、头像"]', '[text="允许"]'],
           snapshotUrls: [
-            'https://i.gkd.li/i/12663602',
-            'https://i.gkd.li/i/13065462',
             'https://i.gkd.li/i/15271716',
             'https://i.gkd.li/i/15524445',
             'https://i.gkd.li/i/16972565',
