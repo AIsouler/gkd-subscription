@@ -13,20 +13,12 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: [
-            'com.meituan.android.upgrade.ui.f',
-            'com.meituan.android.upgrade.UpgradeDialogActivity',
-            'com.meituan.android.pt.homepage.activity.MainActivity',
-          ],
+          activityIds: 'com.meituan.android.upgrade.UpgradeDialogActivity',
           matches: [
-            '[text^="新版本"]',
-            '[id="com.sankuai.meituan:id/btn_close"]',
+            '[text^="新版本"][visibleToUser=true]',
+            '[vid="btn_close"][visibleToUser=true]',
           ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/12614559',
-            'https://i.gkd.li/i/12673132',
-            'https://i.gkd.li/i/13292635',
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/18344492',
         },
       ],
     },

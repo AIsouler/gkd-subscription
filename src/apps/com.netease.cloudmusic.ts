@@ -40,13 +40,13 @@ export default defineGkdApp({
         {
           key: 0,
           matches: '[vid="tag_ad_banner"]',
-          snapshotUrls: 'https://i.gkd.li/import/13927753',
+          snapshotUrls: 'https://i.gkd.li/i/13927753',
         },
         {
           // preKeys: [0], 可能会被其他弹窗插入触发其他规则导致二段不触发
           key: 1,
           matches: '[text="直接关闭"]',
-          snapshotUrls: 'https://i.gkd.li/import/13927752',
+          snapshotUrls: 'https://i.gkd.li/i/13927752',
         },
       ],
     },

@@ -7,14 +7,13 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-扫码自动登录桌面版',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
       rules: [
         {
+          fastQuery: true,
+          actionMaximum: 1,
           activityIds: 'com.alibaba.android.user.qrcode.WebLoginActivity',
-          matches: '[id="com.alibaba.android.rimet:id/btn_login"]',
-          snapshotUrls: 'https://i.gkd.li/i/13433981',
+          matches: '[vid="btn_login"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18344194',
         },
       ],
     },
