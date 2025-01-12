@@ -47,12 +47,18 @@ export default defineGkdApp({
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
-          activityIds: '.MainActivity',
-          matches: '[vid="iv_notification_reminder_dialog_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/14208621',
+          activityIds: [
+            '.MainActivity',
+            'abc.feinno.uilibrary.activitys.PublicListActivity',
+          ],
+          matches:
+            '[vid="iv_notification_reminder_dialog_close" || vid="dialog_notification_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14208621',
+            'https://i.gkd.li/i/18389133',
+          ],
         },
       ],
     },
