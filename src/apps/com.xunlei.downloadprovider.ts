@@ -7,10 +7,12 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
+      matchRoot: true,
       fastQuery: true,
       matchTime: 10000,
-      actionMaximum: 1,
+      actionMaximum: 2,
       resetMatch: 'app',
+      actionCdKey: 0,
       actionMaximumKey: 0,
       priorityTime: 10000,
       rules: [
@@ -30,9 +32,12 @@ export default defineGkdApp({
             left: 'width * 0.9055',
             top: 'width * 0.1611',
           },
-          excludeMatches: '[text*="跳过"]',
-          matches: '[vid="native_container"]',
-          snapshotUrls: 'https://i.gkd.li/i/15048354',
+          excludeMatches: '[text*="跳过"][visibleToUser=true]',
+          matches: '[vid="native_container"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15048354',
+            'https://i.gkd.li/i/18388919',
+          ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/15048376', // 防止在此页面提前触发规则
         },
       ],
