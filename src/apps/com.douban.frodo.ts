@@ -19,8 +19,25 @@ export default defineGkdApp({
             top: 'width * 0.1333',
           },
           matches: '[vid="ad_view"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/460eb38d-9c7b-4321-b3e2-3b4d7f315dbd',
           snapshotUrls: 'https://i.gkd.li/i/18423724',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '评价提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.activity.SplashActivity',
+          matches: [
+            '[text^="喜欢豆瓣吗"][visibleToUser=true]',
+            '[text="下次再说"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/18424257',
         },
       ],
     },
