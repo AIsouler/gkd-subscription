@@ -188,6 +188,7 @@ export const yongBlackListAppIDs = new Set([
 export const updateBlackListAppIDs = new Set([
   ...blackListAppIDs,
   'info.muge.appshare', // AppShare
+  'com.jingdong.app.mall', // 京东 误触 https://i.gkd.li/i/18492630
   ...filterAppsByGroup(apps, '更新提示'),
 ]);
 
