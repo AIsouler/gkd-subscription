@@ -40,18 +40,22 @@ export default defineGkdApp({
             '.index.v2.IndexActivityV2',
             '.notification.NotificationAuthorizationTranslucentActivity',
             'com.xingin.matrix.notedetail.r10.comment.r10.NoteCommentActivity',
+            'com.xingin.authorization.NotificationAuthorizationTranslucentActivity',
           ],
-          matches: '@ImageView <2 FrameLayout >2 [text^="打开通知"]',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true] - LinearLayout > [text^="打开通知"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13195753',
             'https://i.gkd.li/i/13222356',
             'https://i.gkd.li/i/13255627',
+            'https://i.gkd.li/i/18492592',
           ],
         },
         {
           key: 1,
           activityIds: '.index.v2.IndexActivityV2',
-          matches: '@ImageView <2 FrameLayout - [text^="打开通知"]',
+          matches:
+            '@ImageView[visibleToUser=true] <2 FrameLayout - [text^="打开通知"]',
           snapshotUrls: 'https://i.gkd.li/i/13250418',
         },
       ],
