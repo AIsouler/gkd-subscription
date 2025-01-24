@@ -78,13 +78,14 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           actionMaximum: 1,
-          activityIds: '.pb.pb.main.PbActivity',
+          activityIds: ['.pb.pb.main.PbActivity', '.forum.ForumActivity'],
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] <2 LinearLayout - * > [text$="热议中" || text^="猜你喜欢" || text*="进吧逛逛"]',
+            '@ImageView[clickable=true][visibleToUser=true] <2 LinearLayout - * > [text$="热议中" || text^="猜你喜欢" || text*="进吧逛逛" || text^="关注本吧"]',
           snapshotUrls: [
             'https://i.gkd.li/i/16595234',
             'https://i.gkd.li/i/16619736',
             'https://i.gkd.li/i/16647874',
+            'https://i.gkd.li/i/17992981',
           ],
         },
         {
@@ -105,11 +106,12 @@ export default defineGkdApp({
           excludeSnapshotUrls: 'https://i.gkd.li/i/13327933',
         },
         {
-          key: 2,
-          activityIds: '.forum.ForumActivity',
-          matches:
-            '@ImageView[clickable=true][visibleToUser=true] <2 LinearLayout - * > [text^="关注本吧"]',
-          snapshotUrls: 'https://i.gkd.li/i/17992981',
+          key: 3,
+          fastQuery: true,
+          actionMaximum: 1,
+          activityIds: '.pb.pb.main.PbActivity',
+          matches: '@[clickable=true] >2 [text="广告"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18531187',
         },
       ],
     },
