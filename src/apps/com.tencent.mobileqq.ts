@@ -211,8 +211,9 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.activity.SplashActivity',
           matches:
-            'ImageView[childCount=0] < RelativeLayout < FrameLayout +2 LinearLayout >3 @ViewGroup[clickable=true][childCount=5][getChild(3).text!="已领取"] + TextView[text="拼手气红包"]',
+            'ImageView[childCount=0] < RelativeLayout < FrameLayout +2 LinearLayout >3 @ViewGroup[clickable=true][childCount=5][!(getChild(4).text^="已")] + TextView[text="拼手气红包"]',
           snapshotUrls: 'https://i.gkd.li/i/14221309',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/18574530',
         },
         {
           preKeys: [0],
