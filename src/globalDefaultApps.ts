@@ -131,6 +131,8 @@ export const blackListAppIDs: string[] = [
   'com.github.tvbox.osc', // TVBox
   'com.junkfood.seal', // Seal
   'com.junkfood.seal.preview', // Seal Preview
+  'com.pikcloud.pikpak', // PikPak
+  'com.deepseek.chat', // DeepSeek
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
