@@ -20,6 +20,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
+          fastQuery: true,
           actionDelay: 500,
           activityIds: 'com.janz.music.ui.HomeActivity',
           matches:
@@ -28,6 +29,7 @@ export default defineGkdApp({
         },
         {
           key: 3,
+          fastQuery: true,
           actionDelay: 500,
           activityIds: 'com.janz.music.ui.HomeActivity',
           matches:
@@ -54,8 +56,15 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.anythink.basead.ui.ATPortraitTranslucentActivity',
           matches: '[vid="anythink_myoffer_btn_close_id"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/665b18a4-66f4-4a92-94d3-8f05c88436f7',
           snapshotUrls: 'https://i.gkd.li/i/18147895',
+        },
+        {
+          key: 7,
+          fastQuery: true,
+          activityIds: 'com.janz.music.ui.HomeActivity',
+          matches:
+            '@ImageView[childCount=0][visibleToUser=true] + LinearLayout >5 [text="扭出精彩内容"]',
+          snapshotUrls: 'https://i.gkd.li/i/18685793',
         },
       ],
     },
