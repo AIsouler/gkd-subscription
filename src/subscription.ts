@@ -5,7 +5,7 @@ import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
   id: 404,
-  name: '自用订阅',
+  name: '魔法棒棒糖(/≧▽≦)/',
   version: 0,
   author: 'AIsouler',
   checkUpdateUrl: './gkd.version.json5',
