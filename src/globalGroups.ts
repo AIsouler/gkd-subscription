@@ -23,15 +23,10 @@ export default defineGkdGlobalGroups([
         // 防止在应用的搜索页面误触
         excludeMatches:
           '[text*="搜索" || text^="猜你" || text="历史记录" || text$="在搜"][text.length>3 && text.length<6][visibleToUser=true]',
-        matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-      },
-      {
-        key: 1,
-        // 防止在应用的搜索页面误触
-        excludeMatches:
-          '[text*="搜索" || text^="猜你" || text="历史记录" || text$="在搜"][text.length>3 && text.length<6][visibleToUser=true]',
-        matches:
+        anyMatches: [
+          '[text*="跳过"][text.length<10][visibleToUser=true]',
           '[childCount=0][visibleToUser=true][(text.length<10 && (text*="跳过" || text*="跳過" || text~="(?is).*skip.*")) || (vid~="(?is).*skip.*" && text!="帮助" && text!="取消") || id$="tt_splash_skip_btn" || (desc.length<10 && (desc*="跳过" || desc*="跳過" || desc~="(?is).*skip.*"))]',
+        ],
         excludeSnapshotUrls: [
           // 避免误触
           'https://i.gkd.li/i/17108010', // text!="帮助"
