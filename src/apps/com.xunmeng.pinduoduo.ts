@@ -131,7 +131,7 @@ export default defineGkdApp({
             '.activity.NewPageActivity',
             '.ui.activity.MainFrameActivity',
           ],
-          matches: '[text="及时获取物流消息"]',
+          matches: '[text="及时获取物流消息"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/15004580',
             'https://i.gkd.li/i/15048085',
@@ -147,10 +147,12 @@ export default defineGkdApp({
             '.ui.activity.HomeActivity',
             '.ui.activity.MainFrameActivity',
           ],
-          matches: '[text*="发送物流消息"]',
+          matches:
+            '[text*="发送物流消息" || text*="无法接收物流消息"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/17613247',
             'https://i.gkd.li/i/17789290',
+            'https://i.gkd.li/i/18937568',
           ],
         },
       ],
