@@ -7,7 +7,6 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-自动安装/更新应用',
-      matchRoot: true,
       fastQuery: true,
       actionMaximum: 1,
       rules: [
@@ -15,8 +14,8 @@ export default defineGkdApp({
           key: 0,
           name: '点击[安装]/[更新]',
           activityIds: [
-            '.NewInstallerPrepareActivity',
-            '.ui.InstallPrepareAlertActivity',
+            'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+            'com.miui.packageInstaller.NewInstallerPrepareActivity',
           ],
           matches:
             '@FrameLayout[clickable=true] > LinearLayout[childCount=1] > [text^="继续"][text.length=4]',
@@ -27,9 +26,10 @@ export default defineGkdApp({
           ],
         },
         {
-          // preKeys: [0], 有概率不触发
+          preKeys: [0],
           name: '点击[完成]',
-          activityIds: '.ui.normalmode.InstallProgressActivity',
+          activityIds:
+            'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
           matches: '[text="完成"]',
           snapshotUrls: 'https://i.gkd.li/i/16487274',
         },
@@ -40,7 +40,8 @@ export default defineGkdApp({
       name: '功能类-放弃开启安全守护',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: '.ui.normalmode.InstallProgressActivity',
+      activityIds:
+        'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
       rules: [
         {
           key: 0,
@@ -61,7 +62,10 @@ export default defineGkdApp({
       name: '功能类-自动允许应用安装软件',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: '.ui.InstallPrepareAlertActivity',
+      activityIds: [
+        'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+        'com.miui.packageInstaller.NewInstallerPrepareActivity',
+      ],
       rules: [
         {
           key: 0,
@@ -73,13 +77,17 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/16487366',
             'https://i.gkd.li/i/16487389',
+            'https://i.gkd.li/i/18937578',
           ],
         },
         {
           preKeys: [0],
           name: '点击[允许]',
           matches: '[text="允许"]',
-          snapshotUrls: 'https://i.gkd.li/i/16487365',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16487365',
+            'https://i.gkd.li/i/18937576',
+          ],
         },
       ],
     },
@@ -91,7 +99,8 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.ui.InstallPrepareAlertActivity',
+          activityIds:
+            'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
           matches: ['[text$="备案信息"]', '[text="继续安装"]'],
           snapshotUrls: 'https://i.gkd.li/i/17908298',
         },
@@ -102,7 +111,7 @@ export default defineGkdApp({
       name: '功能类-无视风险继续安装',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: '.NewInstallerPrepareActivity',
+      activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
       rules: [
         {
           key: 0,
