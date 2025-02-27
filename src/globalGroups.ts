@@ -34,7 +34,7 @@ export default defineGkdGlobalGroups([
         ],
       },
       {
-        key: 2, // 字节SDK
+        key: 1, // 字节SDK
         anyMatches: [
           '@View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null] <n FrameLayout[childCount>2] >(7,8,9,10) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑"][visibleToUser=true]',
           'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null][visibleToUser=true]',
