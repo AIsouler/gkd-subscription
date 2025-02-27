@@ -55,10 +55,44 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          action: 'back',
           activityIds: '.view.main.MainActivity',
-          matches: '[text="立即更新"]',
+          matches: ['[text="立即更新"]', '[text="取消"]'],
           snapshotUrls: 'https://i.gkd.li/i/15511206',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '分段广告-信息流广告',
+      fastQuery: true,
+      activityIds: [
+        '.view.feed.FeedDetailActivityV8',
+        '.view.main.MainActivity',
+        '.view.node.DynamicNodePageActivity',
+      ],
+      rules: [
+        {
+          key: 0,
+          matches: ['[vid="coolapk_card_view"]', '[vid="close_view"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/19004644',
+            'https://i.gkd.li/i/19004652',
+            'https://i.gkd.li/i/19004663',
+            'https://i.gkd.li/i/19005176',
+          ],
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/14996359',
+            'https://i.gkd.li/i/15159886',
+            'https://i.gkd.li/i/15587119',
+          ],
+        },
+        {
+          preKeys: [0],
+          matches: '@[clickable=true] > [text="不感兴趣"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19004649',
+            'https://i.gkd.li/i/19004661',
+          ],
         },
       ],
     },
