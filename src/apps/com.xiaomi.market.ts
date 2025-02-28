@@ -23,7 +23,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '全屏广告-点击升级软件后的弹窗',
+      name: '全屏广告-关闭升级软件后的弹窗',
       fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
