@@ -27,6 +27,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          key: 0,
           fastQuery: true,
           activityIds: '.activity.MainActivity',
           matches: [
@@ -34,6 +35,24 @@ export default defineGkdApp({
             '[vid="cancel"][visibleToUser=true]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/19035150',
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: '.activity.MainActivity',
+          matches:
+            '@TextView[index=0][id=null][childCount=0][visibleToUser=true] < View < View < WebView[text="福利社"] < WebView < [vid="common_fragment_web_view_parent"]',
+          snapshotUrls: 'https://i.gkd.li/i/19143658',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.playpage.activity.PlayPageActivity',
+          matches: '[vid="close_mp4_gift_button"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/19143691',
         },
       ],
     },
