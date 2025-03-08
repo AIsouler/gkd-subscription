@@ -146,22 +146,15 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      actionMaximumKey: 0,
       rules: [
-        {
-          key: 0,
-          activityIds: '.activity.SplashActivity',
-          matches: '@[desc="关闭"] <2 * >2 Button[text^="立即"][text.length=4]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13386719',
-            'https://i.gkd.li/i/13526551',
-          ],
-        },
         {
           key: 1,
           activityIds: '.upgrade.activity.UpgradeActivity',
-          matches: ['[text="立即升级"]', '[text="稍后处理"]'],
-          snapshotUrls: 'https://i.gkd.li/i/14724108',
+          matches: [
+            '[text="立即体验"][visibleToUser=true]',
+            '[text="近期不提醒"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/19141671',
         },
       ],
     },
