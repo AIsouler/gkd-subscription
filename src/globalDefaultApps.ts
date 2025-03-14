@@ -25,6 +25,7 @@ export const blackListAppIDs: string[] = [
   'com.xiaomi.smarthome', // 米家
   'com.xiaomi.scanner', // 小爱视觉
   'com.xiaomi.shop', // 小米商城
+  'com.mi.earphone', // 小米耳机
 
   // 第三方应用
   'com.tencent.mm', // 微信
@@ -118,7 +119,7 @@ export const blackListAppIDs: string[] = [
   'com.predidit.kazumi', // Kazumi
   'com.crow.pastemanga', // PasteMangaX
   'com.omarea.vtools', // Scene
-  'deltazero.amarok', // Amarok 更新提示在 https://i.gkd.li/i/17812411 误触
+  'deltazero.amarok', // Amarok
   'com.sixbugs.bujuan', // BuJuan
   'rikka.appops', // App Ops
   'cn.wps.moffice_eng', // WPS Office
@@ -133,6 +134,7 @@ export const blackListAppIDs: string[] = [
   'com.junkfood.seal.preview', // Seal Preview
   'com.pikcloud.pikpak', // PikPak
   'com.deepseek.chat', // DeepSeek
+  'bin.mt.plus', // MT管理器
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
@@ -151,7 +153,6 @@ function filterAppsByGroup(apps: any[], groupNamePrefix: string): string[] {
 // 开屏广告黑名单
 export const openAdBlackListAppIDs = new Set([
   ...blackListAppIDs,
-  'bin.mt.plus', // MT管理器
   ...filterAppsByGroup(apps, '开屏广告'),
 ]);
 
@@ -186,14 +187,6 @@ export const yongBlackListAppIDs = new Set([
   ...filterAppsByGroup(apps, '青少年模式'),
 ]);
 
-// 更新提示黑名单
-export const updateBlackListAppIDs = new Set([
-  ...blackListAppIDs,
-  'info.muge.appshare', // AppShare
-  'com.jingdong.app.mall', // 京东 误触 https://i.gkd.li/i/18492630
-  ...filterAppsByGroup(apps, '更新提示'),
-]);
-
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
 // 在一些系统软件中启用所有全局规则
 export const whiteListAppIDs: string[] = [];
@@ -207,6 +200,3 @@ export const openAdWhiteListAppIDs = new Set([
 
 // 青少年模式白名单
 export const yongWhiteListAppIDs = new Set([...whiteListAppIDs]);
-
-// 更新提示白名单
-export const updateWhiteListAppIDs = new Set([...whiteListAppIDs]);
