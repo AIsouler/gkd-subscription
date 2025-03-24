@@ -40,24 +40,6 @@ export default defineGkdApp({
       name: '全屏广告-底部弹窗广告',
       rules: [
         {
-          key: 0,
-          matchTime: 10000,
-          activityIds: [
-            '.activity.TranslucentWebViewActivity',
-            '.activity.AppStarterActivity',
-          ],
-          matches:
-            '@[desc^="关闭"][desc.length<5][clickable=true][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13115121',
-            'https://i.gkd.li/i/14549936',
-            'https://i.gkd.li/i/14798904',
-            'https://i.gkd.li/i/16357854',
-            'https://i.gkd.li/i/17057551',
-            'https://i.gkd.li/i/17459008',
-          ],
-        },
-        {
           key: 1,
           fastQuery: true,
           matchTime: 10000,
