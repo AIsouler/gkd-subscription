@@ -135,6 +135,8 @@ export const blackListAppIDs: string[] = [
   'com.pikcloud.pikpak', // PikPak
   'com.deepseek.chat', // DeepSeek
   'bin.mt.plus', // MT管理器
+  'com.yjllq.kito', // 可拓浏览器
+  'com.example.piliplus', // PiliPlus
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
