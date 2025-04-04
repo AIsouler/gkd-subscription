@@ -154,6 +154,8 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
+          actionMaximum: 1,
+          action: 'clickCenter', // clickNode可能无效
           activityIds:
             'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
           matches:
