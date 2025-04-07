@@ -80,7 +80,7 @@ export default defineGkdApp({
       fastQuery: true,
       rules: [
         {
-          key: 3,
+          key: 0,
           name: '点击别人发的红包',
           activityIds: '.ui.LauncherUI',
           matches:
@@ -92,8 +92,8 @@ export default defineGkdApp({
           ],
         },
         {
-          preKeys: [3],
-          key: 4,
+          preKeys: [0],
+          key: 1,
           name: '点击红包-开',
           activityIds: '.plugin.luckymoney.ui.LuckyMoneyNotHookReceiveUI',
           matches: '@Button[desc="开"] -3 LinearLayout >2 [text$="红包"]',
@@ -101,7 +101,7 @@ export default defineGkdApp({
           excludeSnapshotUrls: 'https://i.gkd.li/i/12567698', // 金币动画的快照
         },
         {
-          preKeys: [3, 4],
+          preKeys: [0, 1],
           name: '从红包结算界面返回',
           activityIds: '.plugin.luckymoney.ui.LuckyMoneyDetailUI',
           matches: '@ImageView[desc="返回"] +2 LinearLayout >8 [text$="红包"]',
