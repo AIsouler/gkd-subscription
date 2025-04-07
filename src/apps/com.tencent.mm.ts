@@ -7,30 +7,40 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段广告-朋友圈广告',
-      fastQuery: true,
       activityIds: '.plugin.sns.ui.improve.ImproveSnsTimelineUI',
       rules: [
         {
           key: 0,
-          name: '点击广告卡片右上角',
+          fastQuery: true,
           matches: '[text="广告"][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/15242828',
+        },
+        {
+          key: 1,
+          matches:
+            'RecyclerView > FrameLayout[id=null][text=null][desc=null] >4 LinearLayout > LinearLayout > LinearLayout[childCount=2] > LinearLayout[index=1][clickable=true][visibleToUser=true][childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/i/19633571',
         },
 
         // 预留key
         // 第二段
         {
-          preKeys: [0],
+          preKeys: [0, 1],
           key: 25,
-          name: '点击[关闭]',
+          fastQuery: true,
           anyMatches: [
-            '[text^="关闭"][clickable=true][visibleToUser=true]',
-            '@[clickable=true] > [text^="关闭"][clickable=false][visibleToUser=true]',
+            '[text^="关闭"][clickable=true][visibleToUser=true]', // 1
+            '@[clickable=true] > [text^="关闭"][clickable=false][visibleToUser=true]', // 2
+            '@[text="关闭该广告"][clickable=true] -2 [text^="对这条广告不感兴趣"][visibleToUser=true]', // 3
           ],
           snapshotUrls: [
-            'https://i.gkd.li/i/13926578', // text="关闭广告"
-            'https://i.gkd.li/i/15242827', // text="关闭该广告"
-            'https://i.gkd.li/i/18284569', // @[clickable=true] > [text^="关闭"][clickable=false]
+            // 1
+            'https://i.gkd.li/i/13926578',
+            'https://i.gkd.li/i/15242827',
+            // 2
+            'https://i.gkd.li/i/18284569',
+            // 3
+            'https://i.gkd.li/i/19633486',
           ],
         },
       ],
