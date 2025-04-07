@@ -125,13 +125,16 @@ export default defineGkdApp({
             '.plugin.gallery.ui.AlbumPreviewUI',
             '.plugin.gallery.ui.ImagePreviewUI',
           ],
-          matches:
+          anyMatches: [
             '@ImageButton[desc="未选中,原图,复选框"][visibleToUser=true] + [text="原图"]',
+            '@ImageButton[desc="未选中,原图,复选框"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/16987145', // 未选中
             'https://i.gkd.li/i/16987144', // 未选中
             'https://i.gkd.li/i/16987141', // 已选中
             'https://i.gkd.li/i/16987147', // 已选中
+            'https://i.gkd.li/i/19625049', // 无法快速查询
           ],
         },
       ],
