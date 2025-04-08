@@ -91,8 +91,22 @@ export default defineGkdApp({
           matches: '@[clickable=true] > [text="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/i/19004649',
-            'https://i.gkd.li/i/19004661',
+            'https://i.gkd.li/i/19643258',
+            'https://i.gkd.li/i/19643262',
           ],
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '局部广告-信息流广告',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.view.search.SuperSearchResultActivity',
+          matches:
+            '@[desc="关闭"] <<n [vid="item_view"] <<n [vid="to_native_ad_view"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/19643150',
         },
       ],
     },

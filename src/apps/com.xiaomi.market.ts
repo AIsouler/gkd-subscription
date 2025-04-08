@@ -23,21 +23,6 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '全屏广告-关闭升级软件后的弹窗',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: '.ui.UpdateListActivity',
-          matches: '[vid="dialog_cancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/14814456',
-        },
-      ],
-    },
-    {
-      key: 4,
       name: '功能类-自动点击[查看全部升级]',
       desc: '应用升级页面',
       matchTime: 10000,
