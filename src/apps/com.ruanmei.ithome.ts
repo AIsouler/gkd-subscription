@@ -22,35 +22,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '分段广告-信息流广告',
-      desc: '长按广告-点击[屏蔽]-点击[不喜欢此条]',
-      fastQuery: true,
-      activityIds: '.ui.MainActivity',
-      rules: [
-        {
-          key: 0,
-          action: 'longClick',
-          matches:
-            '@[longClickable=true] >4 [text="广告 "][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/14734964',
-          excludeSnapshotUrls: 'https://i.gkd.li/i/19340823',
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches: '[text*="屏蔽"]',
-          snapshotUrls: 'https://i.gkd.li/i/14734962',
-        },
-        {
-          preKeys: [1],
-          key: 2,
-          matches: '[vid="rl_dislike"]',
-          snapshotUrls: 'https://i.gkd.li/i/14734987',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-卡片广告',
       fastQuery: true,
