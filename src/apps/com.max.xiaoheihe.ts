@@ -23,5 +23,23 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-自动点击查看原图',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: [
+            '.module.bbs.post.ui.activitys.PicturePostPageActivity',
+            '.module.bbs.post.ui.activitys.WebNewsPostPageActivity',
+          ],
+          matches: '[text^="查看原图"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19996647',
+            'https://i.gkd.li/i/19996671',
+          ],
+        },
+      ],
+    },
   ],
 });
