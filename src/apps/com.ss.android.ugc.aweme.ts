@@ -21,5 +21,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '全屏广告',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.main.MainActivity',
+          matches: 'FlattenUIText[text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20035670',
+        },
+      ],
+    },
   ],
 });
