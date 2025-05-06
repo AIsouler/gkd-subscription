@@ -12,7 +12,10 @@ export default defineGkdApp({
           fastQuery: true,
           matchRoot: true,
           activityIds: '.activity.TrashActivity',
-          matches: ['[text="清空回收站"]', '[text="永久删除"]'],
+          matches: [
+            '[text="清空回收站" || text="清空最近删除"][visibleToUser=true]',
+            '[text="永久删除"][visibleToUser=true]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/17529154',
           excludeSnapshotUrls: 'https://i.gkd.li/i/17529155',
         },
