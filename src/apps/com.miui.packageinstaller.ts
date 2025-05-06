@@ -18,11 +18,12 @@ export default defineGkdApp({
             'com.miui.packageInstaller.NewInstallerPrepareActivity',
           ],
           matches:
-            '@FrameLayout[clickable=true] > LinearLayout[childCount=1] > [text^="继续"][text.length=4]',
+            '@FrameLayout[clickable=true] > LinearLayout[childCount=1] > [text^="继续" || text^="仍然"][text.length=4][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16487278',
             'https://i.gkd.li/i/16487282',
             'https://i.gkd.li/i/17691996',
+            'https://i.gkd.li/i/20053957',
           ],
         },
         {
