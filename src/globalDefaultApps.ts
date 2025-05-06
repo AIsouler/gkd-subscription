@@ -171,6 +171,7 @@ export const yongBlackListAppIDs = new Set([
   'net.afdian.afdian', // 爱发电
   'com.algermusic.app', // AlgerMusicPlayer
   'com.coolncoolapps.easyvideorecorder', // 背景电影录像机
+  'tw.nekomimi.nekogram', // Nekogram
 ]);
 
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
