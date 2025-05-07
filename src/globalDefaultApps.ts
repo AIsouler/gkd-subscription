@@ -23,6 +23,9 @@ export const blackListAppIDs: string[] = [
   'com.xiaomi.scanner', // 小爱视觉
   'com.xiaomi.shop', // 小米商城
   'com.mi.earphone', // 小米耳机
+  'com.miui.video', // 小米视频
+  'com.mi.health', // 小米运动健康
+  'com.xiaomi.vipaccount', // 小米社区
 
   // 第三方应用
   'com.tencent.mm', // 微信
@@ -134,6 +137,10 @@ export const blackListAppIDs: string[] = [
   'bin.mt.plus', // MT管理器
   'com.yjllq.kito', // 可拓浏览器
   'com.example.piliplus', // PiliPlus
+  'tw.nekomimi.nekogram', // Nekogram
+  'net.afdian.afdian', // 爱发电
+  'com.algermusic.app', // AlgerMusicPlayer
+  'com.coolncoolapps.easyvideorecorder', // 背景电影录像机
 ];
 
 // 在应用中单独禁用某个全局规则
@@ -168,11 +175,8 @@ export const yongBlackListAppIDs = new Set([
   'com.ct.client', // 中国电信
   'me.ele', // 饿了么
   'com.tencent.qqmusic', // QQ音乐
-  'net.afdian.afdian', // 爱发电
-  'com.algermusic.app', // AlgerMusicPlayer
-  'com.coolncoolapps.easyvideorecorder', // 背景电影录像机
-  'tw.nekomimi.nekogram', // Nekogram
   'com.ss.android.ugc.aweme', // 抖音 全局规则误触 https://i.gkd.li/i/20061572
+  'com.ruanmei.ithome', // IT之家
 ]);
 
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）

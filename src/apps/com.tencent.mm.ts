@@ -18,8 +18,11 @@ export default defineGkdApp({
         {
           key: 1,
           matches:
-            'RecyclerView > FrameLayout[id=null][text=null][desc=null][childCount=1] >4 LinearLayout > LinearLayout > LinearLayout[childCount=2][getChild(0).childCount=1] > LinearLayout[index=1][clickable=true][visibleToUser=true][childCount=0]',
-          snapshotUrls: 'https://i.gkd.li/i/19633571',
+            'RecyclerView > FrameLayout[id=null][text=null][desc=null][childCount=1] >4 LinearLayout > LinearLayout > LinearLayout[childCount=2] > LinearLayout[index=1][clickable=true][visibleToUser=true][childCount=0]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19633571',
+            'https://i.gkd.li/i/20074295',
+          ],
         },
 
         // 预留key
