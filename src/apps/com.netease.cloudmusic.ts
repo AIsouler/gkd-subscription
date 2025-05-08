@@ -58,9 +58,14 @@ export default defineGkdApp({
         {
           key: 1,
           action: 'back',
-          activityIds: ['.activity.MainActivity', '.activity.PlayerActivity'],
-          excludeMatches: '[text="当前场景"]',
-          matches: '[vid="dsl_dialog_root"]',
+          activityIds: [
+            '.activity.MainActivity',
+            '.activity.PlayerActivity',
+            '.music.biz.rn.activity.LayerReactNativeActivity',
+          ],
+          excludeMatches: '[text="当前场景"][visibleToUser=true]',
+          matches:
+            '[vid="design_bottom_sheet" || vid="dsl_dialog_root" || text^="本周已免费试听"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13804534',
             'https://i.gkd.li/i/13848913',
@@ -69,18 +74,10 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15047126',
             'https://i.gkd.li/i/15125892',
             'https://i.gkd.li/i/15244091',
+            'https://i.gkd.li/i/20097535',
+            'https://i.gkd.li/i/20097609',
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/15404777',
-        },
-        {
-          key: 5,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
-          activityIds: '.activity.MainActivity',
-          matches:
-            'View[childCount=4] > @TextView[index=2][visibleToUser=true] <<n [vid="popLayerWebViewContainer"]',
-          snapshotUrls: 'https://i.gkd.li/i/15160018',
         },
       ],
     },
@@ -115,13 +112,6 @@ export default defineGkdApp({
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/20097306', // 正常开通会员页面
         },
-        {
-          key: 1,
-          action: 'back',
-          activityIds: '.music.biz.rn.activity.LayerReactNativeActivity',
-          matches: '[text^="邀您开通VIP"]',
-          snapshotUrls: 'https://i.gkd.li/i/14956768',
-        },
       ],
     },
     {
@@ -145,58 +135,7 @@ export default defineGkdApp({
       name: '局部广告-卡片广告',
       desc: '点击关闭',
       fastQuery: true,
-      rules: [
-        {
-          key: 0,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
-          activityIds: '.activity.MainActivity',
-          matches: '[vid="adTagView"]',
-          snapshotUrls: 'https://i.gkd.li/i/15047096',
-        },
-        {
-          key: 1,
-          activityIds: '.activity.PlayerActivity',
-          matches:
-            '[vid="iv_ad_close"][clickable=true][visibleToUser=true][focusable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/15282417',
-        },
-        {
-          key: 2,
-          activityIds: '.music.biz.search.activity.SearchActivity',
-          matches: '[vid="adCloseIV"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/16385547',
-        },
-      ],
-    },
-    {
-      key: 6,
-      name: '分段广告-评论区广告',
-      desc: '点击[关闭]-点击[不感兴趣]',
-      fastQuery: true,
-      activityIds: [
-        '.music.biz.comment.activity.CommentActivity',
-        '.music.biz.comment.activity.ReplyCommentActivity2',
-      ],
-      rules: [
-        {
-          key: 1,
-          matches: '[vid="adTagView"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14964828',
-            'https://i.gkd.li/i/15430827',
-          ],
-        },
-        {
-          preKeys: [1],
-          matches: '[text="直接关闭"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14932659',
-            'https://i.gkd.li/i/14964832',
-          ],
-        },
-      ],
+      rules: [],
     },
     {
       key: 7,
