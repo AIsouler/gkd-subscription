@@ -97,7 +97,10 @@ export default defineGkdApp({
             '.activity.MainActivity',
             '.activity.PlayListActivity',
           ],
-          matches: ['[text="支付宝"]', '[text^="确认协议并"]'],
+          matches: [
+            '[text="支付宝"][visibleToUser=true]',
+            '[text^="确认协议并" || text="立即开通"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/13189055',
             'https://i.gkd.li/i/13260416',
@@ -108,7 +111,9 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14045917',
             'https://i.gkd.li/i/14926722',
             'https://i.gkd.li/i/16242200',
+            'https://i.gkd.li/i/20097276',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/20097306', // 正常开通会员页面
         },
         {
           key: 1,
