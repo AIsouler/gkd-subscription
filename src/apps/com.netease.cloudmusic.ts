@@ -65,7 +65,7 @@ export default defineGkdApp({
           ],
           excludeMatches: '[text="当前场景"][visibleToUser=true]',
           matches:
-            '[vid="dsl_dialog_root" || text^="开通VIP" || text^="本周已免费试听"][visibleToUser=true]',
+            '[vid="dsl_dialog_root" || text^="邀您开通VIP" || text^="本周已免费试听" || text^="免费听模式体验中"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13804534',
             'https://i.gkd.li/i/13848913',
@@ -81,6 +81,7 @@ export default defineGkdApp({
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/15404777',
             'https://i.gkd.li/i/20115204',
+            'https://i.gkd.li/i/20159204',
           ],
         },
       ],
