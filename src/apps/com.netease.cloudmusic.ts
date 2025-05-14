@@ -130,8 +130,17 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: '.activity.MainActivity',
-          matches: ['[text*="新版本"]', '[text="近期不再提示"]'],
+          matches: [
+            '[text*="新版本"][visibleToUser=true]',
+            '[text="近期不再提示"][visibleToUser=true]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/16357369',
+        },
+        {
+          key: 1,
+          activityIds: '.activity.MainActivity',
+          matches: '[vid="md_dialog_cm_close_btn"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20200168',
         },
       ],
     },
