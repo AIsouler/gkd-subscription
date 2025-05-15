@@ -30,6 +30,7 @@ export default defineGkdApp({
           key: 0,
           actionMaximum: 1,
           resetMatch: 'app',
+          actionDelay: 300,
           activityIds: '.ui.MainActivity',
           matches:
             '@[visibleToUser=true][text="关闭"] <<n [vid="ll_web"][visibleToUser=true] + [vid="shadowLayout"][visibleToUser=true]',
