@@ -98,6 +98,7 @@ export default defineGkdApp({
             '.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
             '.activity.MainActivity',
             '.activity.PlayListActivity',
+            '.music.biz.rn.activity.LayerReactNativeActivity',
           ],
           matches: [
             '[text="支付宝"][visibleToUser=true]',
@@ -114,6 +115,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14926722',
             'https://i.gkd.li/i/16242200',
             'https://i.gkd.li/i/20097276',
+            'https://i.gkd.li/i/20218350',
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/20097306', // 正常开通会员页面
         },
