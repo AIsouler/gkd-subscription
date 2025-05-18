@@ -45,6 +45,7 @@ export default defineGkdGlobalGroups([
         snapshotUrls: [
           'https://i.gkd.li/i/19685971', // +(1,2)
           'https://i.gkd.li/i/19701216', // +(1,2)
+          'https://i.gkd.li/i/20262130',
         ],
       },
     ],
