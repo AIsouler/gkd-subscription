@@ -25,7 +25,6 @@ export const blackListAppIDs: string[] = [
   'com.mi.earphone', // 小米耳机
   'com.miui.video', // 小米视频
   'com.mi.health', // 小米运动健康
-  'com.xiaomi.vipaccount', // 小米社区
 
   // 第三方应用
   'com.tencent.mm', // 微信
@@ -114,7 +113,6 @@ export const blackListAppIDs: string[] = [
   'com.one.my_ai', // 艾跳跳
   'com.cnspeedtest.globalspeed', // 全球网测
   'com.github.wgh136.venera', // venera
-  'com.wandoujia.phoenix2', // 豌豆荚
   'com.hicorenational.antifraud.fork', // 国家反诈中心（伪）
   'com.predidit.kazumi', // Kazumi
   'com.crow.pastemanga', // PasteMangaX
@@ -177,6 +175,8 @@ export const yongBlackListAppIDs = new Set([
   'com.tencent.qqmusic', // QQ音乐
   'com.ss.android.ugc.aweme', // 抖音 全局规则误触 https://i.gkd.li/i/20061572
   'com.ruanmei.ithome', // IT之家
+  'com.xiaomi.vipaccount', // 小米社区
+  'com.wandoujia.phoenix2', // 豌豆荚
 ]);
 
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）

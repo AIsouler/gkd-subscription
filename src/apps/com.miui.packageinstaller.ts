@@ -31,8 +31,10 @@ export default defineGkdApp({
           name: '点击[完成]',
           activityIds:
             'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
+          excludeMatches: '[text*="安装失败"][visibleToUser=true]', // 安装失败时排除匹配
           matches: '[text="完成"]',
           snapshotUrls: 'https://i.gkd.li/i/16487274',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/20282424',
         },
       ],
     },
@@ -72,22 +74,24 @@ export default defineGkdApp({
           key: 0,
           name: '点击[记住我的选择]',
           matches: [
-            '[text$="安装应用？"]',
-            'CheckBox[text="记住我的选择"][checked=false]',
+            '[text^="是否允许"][text*="安装应用"][visibleToUser=true]',
+            'CheckBox[text="记住我的选择"][checked=false][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/16487366',
             'https://i.gkd.li/i/16487389',
             'https://i.gkd.li/i/18937578',
+            'https://i.gkd.li/i/20287209',
           ],
         },
         {
           preKeys: [0],
           name: '点击[允许]',
-          matches: '[text="允许"]',
+          matches: '[text="允许"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16487365',
             'https://i.gkd.li/i/18937576',
+            'https://i.gkd.li/i/20287160',
           ],
         },
       ],
