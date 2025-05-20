@@ -23,6 +23,7 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           actionMaximum: 1,
+          actionDelay: 300,
           activityIds: '.feed.DetailWeiboActivity',
           matches: '[vid="close_layout"][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20277548',
