@@ -150,8 +150,16 @@ export default defineGkdApp({
       key: 5,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
-      fastQuery: true,
-      rules: [],
+      rules: [
+        {
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          activityIds: '.music.biz.rn.activity.MainProcessRNActivity',
+          matches: '[vid="adTagView"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20367030',
+        },
+      ],
     },
     {
       key: 7,
