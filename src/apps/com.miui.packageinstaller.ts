@@ -31,7 +31,7 @@ export default defineGkdApp({
           name: '点击[完成]',
           activityIds:
             'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
-          excludeMatches: '[text*="安装失败"][visibleToUser=true]', // 安装失败时排除匹配
+          excludeMatches: '[text*="安装失败"]', // 安装失败时排除匹配，此节点比 [text="完成"] 延迟出现，未出现时 visibleToUser=false，因此去掉[visibleToUser=true]限制
           matches: '[text="完成"]',
           snapshotUrls: 'https://i.gkd.li/i/16487274',
           excludeSnapshotUrls: 'https://i.gkd.li/i/20282424',
