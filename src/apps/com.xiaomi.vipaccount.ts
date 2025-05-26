@@ -29,6 +29,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      forcedTime: 10000,
       rules: [
         {
           activityIds: '.ui.home.page.HomeFrameActivity',
