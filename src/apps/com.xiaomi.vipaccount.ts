@@ -14,8 +14,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           excludeActivityIds: '.search.SearchActivity',
-          activityIds: 'com.xiaomi.mi.launch.process.OpenScreenActivity',
-          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          matches: '[vid="tv_skip"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20282479',
           excludeSnapshotUrls: 'https://i.gkd.li/i/20282598',
         },

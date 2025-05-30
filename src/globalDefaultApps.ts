@@ -25,6 +25,10 @@ export const blackListAppIDs: string[] = [
   'com.mi.earphone', // 小米耳机
   'com.miui.video', // 小米视频
   'com.mi.health', // 小米运动健康
+  'com.miui.securitymanager', // 手机管家
+  'com.android. providers.downloads.ui', // 下载管理
+  'com.miui.gallery', // 小米相册
+  'com.miui.themestore', // 小米主题商店
 
   // 第三方应用
   'com.tencent.mm', // 微信
@@ -139,6 +143,12 @@ export const blackListAppIDs: string[] = [
   'net.afdian.afdian', // 爱发电
   'com.algermusic.app', // AlgerMusicPlayer
   'com.coolncoolapps.easyvideorecorder', // 背景电影录像机
+  'com.termux', // Termux
+  'com.didjdk.adbhelper', // 甲壳虫ADB助手
+  'com.qingmusic.changqing', // 青听音乐
+
+  // 游戏
+  'com.ChillyRoom.DungeonShooter', // 元气骑士
 ];
 
 // 在应用中单独禁用某个全局规则
