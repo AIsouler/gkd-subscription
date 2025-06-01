@@ -26,7 +26,7 @@ export const blackListAppIDs: string[] = [
   'com.miui.video', // 小米视频
   'com.mi.health', // 小米运动健康
   'com.miui.securitymanager', // 手机管家
-  'com.android. providers.downloads.ui', // 下载管理
+  'com.android.providers.downloads.ui', // 下载管理
   'com.miui.gallery', // 小米相册
   'com.miui.themestore', // 小米主题商店
 
