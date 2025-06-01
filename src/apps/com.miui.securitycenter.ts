@@ -2,7 +2,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.miui.securitycenter',
-  name: '小米手机管家',
+  name: '安全服务',
   groups: [
     {
       key: 1,
@@ -25,12 +25,16 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.miui.securityscan.MainActivity',
-          matches: '[text="退出"]',
+          matches: [
+            '[text="体检优化" || text="存储空间预警"][visibleToUser=true]',
+            '[text="退出"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/13474504',
             'https://i.gkd.li/i/13476770',
             'https://i.gkd.li/i/15137908',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/20538871',
         },
       ],
     },
