@@ -13,8 +13,8 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          name: '会员打折弹窗',
           fastQuery: true,
+          matchRoot: true,
           activityIds: '.ad.AdPopupActivity',
           matches: '[vid="ad_popup_close_iv"]',
           snapshotUrls: 'https://i.gkd.li/i/14320937',
