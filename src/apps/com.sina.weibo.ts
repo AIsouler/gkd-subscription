@@ -45,5 +45,23 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '权限提示-通知权限',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.notifyguidev2.NotifyGuideV2Activity',
+          matches: [
+            '[text="选择通知类型"][visibleToUser=true]',
+            '[text="暂不开启"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/20562139',
+        },
+      ],
+    },
   ],
 });
