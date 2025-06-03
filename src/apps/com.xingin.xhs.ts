@@ -86,7 +86,7 @@ export default defineGkdApp({
         {
           action: 'back',
           activityIds: 'com.xingin.lurker.appscore.ui.AppScoreDialogActivity',
-          matches: '[text="您对小红书的评分如何?"]',
+          matches: '[text^="您对小红书的评分如何"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/15281458',
         },
       ],
