@@ -10,15 +10,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: [
+          activityIds:
             'com.bilibili.bplus.im.communication.HomeCommunicationActivity',
-            'tv.danmaku.bili.MainActivityV2',
-          ],
           matches: '[vid="common_dialog_positive_btn"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/19243184',
-            'https://i.gkd.li/i/20035718',
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/19243184',
         },
       ],
     },
