@@ -14,7 +14,6 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          matchRoot: true,
           activityIds: '.ad.AdPopupActivity',
           matches: '[vid="ad_popup_close_iv"]',
           snapshotUrls: 'https://i.gkd.li/i/14320937',
