@@ -44,37 +44,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17800557',
           ],
         },
-        {
-          key: 3,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
-          action: 'back',
-          activityIds: '.ui.activity.HomeActivity',
-          matches:
-            '@ViewGroup[childCount=1][clickable=true][visibleToUser=true] < ViewGroup[childCount=2] < [childCount=1] < [vid="pdd"][childCount=1] < [childCount=1] < [vid="pdd"][childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [parent=null]',
-          snapshotUrls: 'https://i.gkd.li/i/17348846',
-        },
-        {
-          key: 4,
-          fastQuery: true,
-          matchTime: 10000,
-          actionMaximum: 1,
-          resetMatch: 'app',
-          action: 'back',
-          activityIds: '.activity.NewPageMaskActivity',
-          matches:
-            '@TextView[text="你有一张无门槛券可使用"][visibleToUser=true] <3 View < View < View < View < WebView < WebView < FrameLayout < FrameLayout <2 ViewGroup <2 FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
-          snapshotUrls: 'https://i.gkd.li/i/17613246',
-        },
-        {
-          key: 5,
-          fastQuery: true,
-          action: 'back',
-          activityIds: '.activity.NewPageActivity',
-          matches: '[text="本单可用优惠"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/17933585',
-        },
       ],
     },
     {
@@ -163,7 +132,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'back', // 点击取消会导致 MIUI 截图悬浮窗收起
+          action: 'back', // 点击取消会导致截图悬浮窗收起
           activityIds: '.activity.NewPageActivity',
           matches: '[text="搜索图片同款商品"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/19340768',
