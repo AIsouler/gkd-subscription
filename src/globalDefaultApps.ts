@@ -146,6 +146,7 @@ export const blackListAppIDs: string[] = [
   'com.termux', // Termux
   'com.didjdk.adbhelper', // 甲壳虫ADB助手
   'com.qingmusic.changqing', // 青听音乐
+  'ru.tech.imageresizershrinker', // Image Toolbox
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
