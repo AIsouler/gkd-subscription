@@ -106,10 +106,14 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
-          matches: ['[text="同意协议并开通"]', '[text="30天不再提醒"]'],
+          matches: [
+            '[text="同意协议并开通" || text*="开通花呗"][visibleToUser=true]',
+            '[text="30天不再提醒" || text="不感兴趣"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/14060628',
             'https://i.gkd.li/i/15050300',
+            'https://i.gkd.li/i/20684144',
           ],
         },
       ],
