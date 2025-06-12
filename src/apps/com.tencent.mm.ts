@@ -301,5 +301,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 14,
+      name: '功能类-收付款页面点击[我知道了]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.framework.app.UIPageFragmentActivity',
+          matches: [
+            '[text="收付款"][visibleToUser=true]',
+            '@Button[desc="我知道了"][clickable=true] > [text="我知道了"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/20709385',
+        },
+      ],
+    },
   ],
 });
