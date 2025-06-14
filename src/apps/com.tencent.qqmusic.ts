@@ -43,10 +43,16 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           matchTime: 10000,
-          activityIds: '.business.playernew.view.NewPlayerActivity',
+          activityIds: [
+            '.business.playernew.view.NewPlayerActivity',
+            '.activity.AppStarterActivity',
+          ],
           matches:
-            '@ImageView[id=null][childCount=0][visibleToUser=true] < FrameLayout[id=null][childCount=1] <2 FrameLayout[id=null][childCount=6][getChild(2).childCount=4] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < [id="android:id/content"]',
-          snapshotUrls: 'https://i.gkd.li/i/18265539',
+            '@ImageView[id=null][childCount=0][visibleToUser=true][width<120&&height<120] < FrameLayout[id=null][childCount=1] <2 FrameLayout[id=null][childCount>5] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < [id="android:id/content"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/18265539',
+            'https://i.gkd.li/i/20737798',
+          ],
         },
       ],
     },

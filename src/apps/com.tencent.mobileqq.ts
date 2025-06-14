@@ -71,46 +71,25 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能类-登录授权',
-      desc: '自动点击登录',
-      fastQuery: true,
-      actionMaximum: 1,
       rules: [
         {
           key: 1,
+          fastQuery: true,
+          matchRoot: true,
+          actionCd: 500,
           activityIds: [
             'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
             'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
           ],
           matches: [
-            '[text="登录确认" || text="你的QQ头像和昵称信息"][visibleToUser=true]',
-            'Button[text="登录" || text="同意"][clickable=true][visibleToUser=true]',
+            '[text="登录确认" || text$="申请使用"][visibleToUser=true]',
+            'Button[text="登录" || text="同意" || text="确认"][clickable=true][visibleToUser=true]',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/i/14752498',
-            'https://i.gkd.li/i/18207086',
-          ],
-        },
-        {
-          key: 2,
-          activityIds:
-            'com.tencent.biz.pubaccount.api.impl.PublicAccountBrowserImpl',
-          matches:
-            'WebView[text="登录确认"] >4 @[clickable=true][visibleToUser=true][text="登录"] <<n [vid="webview"]',
-          snapshotUrls: 'https://i.gkd.li/i/18207069',
-        },
-        {
-          preKeys: [1, 2],
-          activityIds: [
-            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
-            'com.tencent.biz.pubaccount.api.impl.PublicAccountBrowserImpl',
-          ],
-          anyMatches: [
-            'Button[text="确认"][clickable=true][visibleToUser=true]',
-            '@[clickable=true][visibleToUser=true][text="我知道了"] <<n [vid="webview"]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/14752519',
-            'https://i.gkd.li/i/18206793',
+            'https://i.gkd.li/i/20737721',
+            'https://i.gkd.li/i/20737651',
+            'https://i.gkd.li/i/20737675',
+            'https://i.gkd.li/i/20737673',
           ],
         },
       ],
