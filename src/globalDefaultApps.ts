@@ -149,6 +149,7 @@ export const blackListAppIDs: string[] = [
   'ru.tech.imageresizershrinker', // Image Toolbox
   'com.jiaohua_browser', // JMComic2
   'com.picacomic.fregata', // PicACG
+  'com.rosan.installer.x.revived', // installerX Revived
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
