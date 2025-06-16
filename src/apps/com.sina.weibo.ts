@@ -33,7 +33,6 @@ export default defineGkdApp({
     {
       key: 2,
       name: '评价提示',
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
