@@ -76,6 +76,7 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           matchRoot: true,
+          actionMaximum: 3,
           actionCd: 500,
           activityIds: [
             'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',

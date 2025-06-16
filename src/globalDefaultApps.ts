@@ -150,6 +150,7 @@ export const blackListAppIDs: string[] = [
   'com.jiaohua_browser', // JMComic2
   'com.picacomic.fregata', // PicACG
   'com.rosan.installer.x.revived', // installerX Revived
+  'com.zhihu.hydrogen.x', // Hydrogen
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士

@@ -18,27 +18,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '功能类-使用返回退出时直接点击[退出]',
-      desc: '退出时忽略[体检优化分数]/忽略[存储空间预警]',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.miui.securityscan.MainActivity',
-          matches: [
-            '[text="体检优化" || text="存储空间预警"][visibleToUser=true]',
-            '[text="退出"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13474504',
-            'https://i.gkd.li/i/13476770',
-            'https://i.gkd.li/i/15137908',
-          ],
-          excludeSnapshotUrls: 'https://i.gkd.li/i/20538871',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '功能类-电量已低于20%',
       desc: '点击[知道了]',
@@ -94,8 +73,12 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.miui.wakepath.ui.ConfirmStartActivity',
-          matches: ['[text^="InstallerX 想要打开"]', '[text="允许"]'],
-          snapshotUrls: 'https://i.gkd.li/i/15263088',
+          matches: ['[text*="InstallerX"][text*="想要打开"]', '[text$="允许"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/15263088',
+            'https://i.gkd.li/i/20748624',
+            'https://i.gkd.li/i/20748626',
+          ],
         },
       ],
     },
