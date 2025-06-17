@@ -45,17 +45,18 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '局部广告-悬浮广告',
+      name: '局部广告-卡片广告',
       desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
-          activityIds: '.ui.MainActivity',
+          key: 1,
+          fastQuery: true,
+          matchTime: 10000,
+          actionCd: 500,
+          activityIds: '.ui.transfer.TransferListTabActivity',
           matches:
-            '@ImageView[vid="float_btn_close"][visibleToUser=true] < ViewGroup <2 FrameLayout <2 LinearLayout < FrameLayout < LinearLayout < FrameLayout < [vid="content_view"]',
-          snapshotUrls: 'https://i.gkd.li/i/14278618',
+            '[vid="youa_guide_close" || vid="close_probationary_guide_layout"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20775291',
         },
       ],
     },
