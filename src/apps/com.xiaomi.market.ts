@@ -17,8 +17,12 @@ export default defineGkdApp({
           key: 0,
           action: 'clickCenter', // clickNode 可能无效
           activityIds: '.ui.FloatWebActivity',
-          matches: '@Button[clickable=true][text="关闭"] <<n [vid="webview"]',
-          snapshotUrls: 'https://i.gkd.li/i/19902846',
+          matches:
+            '@Button[text="关闭" || desc="关闭"][clickable=true][visibleToUser=true] <<n [vid="webview"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19902846',
+            'https://i.gkd.li/i/20946336',
+          ],
         },
       ],
     },
