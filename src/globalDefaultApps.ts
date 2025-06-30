@@ -192,6 +192,7 @@ export const yongBlackListAppIDs = new Set([
   'com.ruanmei.ithome', // IT之家
   'com.xiaomi.vipaccount', // 小米社区
   'com.wandoujia.phoenix2', // 豌豆荚
+  'com.luna.music', // 汽水音乐
 ]);
 
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
