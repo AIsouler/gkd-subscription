@@ -1,0 +1,22 @@
+import { defineGkdApp } from '@gkd-kit/define';
+
+export default defineGkdApp({
+  id: 'com.luna.music',
+  name: '汽水音乐',
+  groups: [
+    {
+      key: 1,
+      name: '功能类-关闭广告的声音',
+      actionMaximum: 1,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+          matches: '[text="开启声音"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20979049',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/20979052', // 关闭声音后
+        },
+      ],
+    },
+  ],
+});
