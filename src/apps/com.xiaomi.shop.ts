@@ -35,7 +35,7 @@ export default defineGkdApp({
           activityIds: 'com.xiaomi.shop2.activity.MainActivity',
           matches:
             '@ImageView[clickable=true][childCount=0][index=parent.childCount.minus(1)] <2 LinearLayout < RelativeLayout < [id="android:id/content"]',
-          snapshotUrls: ['https://i.gkd.li/i/14393039'],
+          snapshotUrls: 'https://i.gkd.li/i/14393039',
         },
       ],
     },
