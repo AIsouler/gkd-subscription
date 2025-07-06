@@ -24,6 +24,9 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能类-点击指纹登录',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
