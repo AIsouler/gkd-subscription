@@ -26,10 +26,25 @@ export default defineGkdApp({
       name: '全屏广告',
       rules: [
         {
+          key: 0,
           fastQuery: true,
           activityIds: '.main.MainActivity',
           matches: 'FlattenUIText[text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20035670',
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          action: 'back',
+          activityIds: '.main.MainActivity',
+          matches: [
+            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物"][visibleToUser=true])',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/21142063',
+            'https://i.gkd.li/i/21142589',
+            'https://i.gkd.li/i/21142249',
+          ],
         },
       ],
     },
