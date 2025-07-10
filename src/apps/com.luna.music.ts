@@ -18,5 +18,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.luna.biz.main.main.MainActivity',
+          matches: '[text="稍后再说"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21164341',
+        },
+      ],
+    },
   ],
 });

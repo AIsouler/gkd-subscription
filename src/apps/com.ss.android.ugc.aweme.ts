@@ -38,12 +38,13 @@ export default defineGkdApp({
           action: 'back',
           activityIds: '.main.MainActivity',
           matches: [
-            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物"][visibleToUser=true])',
+            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text="游戏"][visibleToUser=true])',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/21142063',
             'https://i.gkd.li/i/21142589',
             'https://i.gkd.li/i/21142249',
+            'https://i.gkd.li/i/21142871',
           ],
         },
       ],
