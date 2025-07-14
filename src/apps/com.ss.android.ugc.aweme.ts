@@ -64,5 +64,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '局部广告-悬浮广告',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.live.LivePlayActivity',
+          matches: 'Button[vid="iv_close"][desc="关闭"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21212913',
+        },
+      ],
+    },
   ],
 });
