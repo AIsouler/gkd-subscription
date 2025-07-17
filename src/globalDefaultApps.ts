@@ -152,6 +152,7 @@ export const blackListAppIDs: string[] = [
   'com.rosan.installer.x.revived', // installerX Revived
   'com.zhihu.hydrogen.x', // Hydrogen
   'org.videolan.vlc', // VLC
+  'cn.cyberIdentity.certification', // 国家网络身份认证
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
