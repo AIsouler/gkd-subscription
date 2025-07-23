@@ -76,5 +76,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-个人主页自动选中作品页面',
+      matchTime: 10000,
+      actionMaximum: 1,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.detail.ui.DetailActivity',
+          matches:
+            '@[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
+          snapshotUrls: 'https://i.gkd.li/i/21388939',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/21388934', // 已选中
+        },
+      ],
+    },
   ],
 });
