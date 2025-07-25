@@ -84,10 +84,13 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.detail.ui.DetailActivity',
+          activityIds: ['.detail.ui.DetailActivity', '.main.MainActivity'],
           matches:
             '@[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
-          snapshotUrls: 'https://i.gkd.li/i/21388939',
+          snapshotUrls: [
+            'https://i.gkd.li/i/21388939',
+            'https://i.gkd.li/i/21430232',
+          ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/21388934', // 已选中
         },
       ],
