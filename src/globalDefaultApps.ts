@@ -154,6 +154,7 @@ export const blackListAppIDs: string[] = [
   'org.videolan.vlc', // VLC
   'cn.cyberIdentity.certification', // 国家网络身份认证
   'com.ifreedomer.flix', // Flix
+  'com.bitwarden.authenticator', // Bitwarden Authenticator
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
 ];
