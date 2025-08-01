@@ -84,9 +84,8 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: ['.detail.ui.DetailActivity', '.main.MainActivity'],
-          excludeMatches: '[text="编辑主页"]',
           matches:
-            '@[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
+            '[desc!^="收藏"] - @[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
           snapshotUrls: [
             'https://i.gkd.li/i/21388939',
             'https://i.gkd.li/i/21430232',
