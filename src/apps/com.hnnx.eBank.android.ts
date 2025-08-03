@@ -37,5 +37,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '全屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.cqrcb.mainbundle.page.MainActivity',
+          matches: '[vid="img_close"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21565709',
+        },
+      ],
+    },
   ],
 });
