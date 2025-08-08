@@ -72,8 +72,11 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.live.LivePlayActivity',
-          matches: 'Button[vid="iv_close"][desc="关闭"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/21212913',
+          matches: '[vid="iv_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/21212913',
+            'https://i.gkd.li/i/21675219',
+          ],
         },
       ],
     },
