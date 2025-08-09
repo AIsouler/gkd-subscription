@@ -70,6 +70,7 @@ export default defineGkdApp({
         '.view.main.MainActivity',
         '.view.node.DynamicNodePageActivity',
         '.view.base.SimpleAlphaActivity',
+        '.view.search.SuperSearchResultActivity',
       ],
       rules: [
         {
@@ -82,6 +83,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/19004663',
             'https://i.gkd.li/i/19005176',
             'https://i.gkd.li/i/20776874',
+            'https://i.gkd.li/i/21693917',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/14996359',
@@ -98,20 +100,8 @@ export default defineGkdApp({
             'https://i.gkd.li/i/19643258',
             'https://i.gkd.li/i/19643262',
             'https://i.gkd.li/i/20776872',
+            'https://i.gkd.li/i/21693916',
           ],
-        },
-      ],
-    },
-    {
-      key: 3,
-      name: '局部广告-信息流广告',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.view.search.SuperSearchResultActivity',
-          matches:
-            '@[desc="关闭"] <<n [vid="item_view"] <<n [vid="to_native_ad_view"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/19643150',
         },
       ],
     },
