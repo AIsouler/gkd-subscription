@@ -38,7 +38,7 @@ export default defineGkdApp({
           action: 'back',
           activityIds: '.main.MainActivity',
           matches: [
-            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text="游戏" || text="子薇剧场"][visibleToUser=true])',
+            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text$="游戏" || text="子薇剧场"][visibleToUser=true])',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/21142063',
@@ -46,6 +46,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/21142249',
             'https://i.gkd.li/i/21142871',
             'https://i.gkd.li/i/21523849',
+            'https://i.gkd.li/i/21725628',
           ],
         },
       ],

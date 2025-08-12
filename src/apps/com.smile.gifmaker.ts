@@ -41,6 +41,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
+          matchRoot: true,
           action: 'back',
           activityIds: 'com.yxcorp.gifshow.HomeActivity',
           matches: '[text="朋友推荐"][visibleToUser=true]',
