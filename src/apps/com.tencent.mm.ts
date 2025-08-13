@@ -230,22 +230,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '全屏广告-文档页面-腾讯文档APP弹窗',
-      desc: '点击关闭',
-      matchTime: 10000,
-      actionMaximum: 1,
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.plugin.webview.ui.tools.MMWebViewUI',
-          matches:
-            '@TextView[clickable=true] + * > [visibleToUser=true][text^="使用 APP"] <<n [id="android:id/content"]',
-          snapshotUrls: 'https://i.gkd.li/i/14533286',
-        },
-      ],
-    },
-    {
       key: 11,
       name: '功能类-付款时自动点击[支付]',
       fastQuery: true,

@@ -159,22 +159,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '全屏广告-腾讯文档页面-[使用App]弹窗',
-      desc: '点击关闭',
-      matchTime: 10000,
-      actionMaximum: 1,
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.activity.TeamWorkDocEditBrowserActivity',
-          matches:
-            '@TextView[clickable=true] + * > [visibleToUser=true][text^="使用 APP"] <<n [vid="webview"]',
-          snapshotUrls: 'https://i.gkd.li/i/14188983',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '功能类-自动领红包',
       desc: '自己发的红包、专属红包、口令红包、私聊红包不领',
@@ -226,50 +210,7 @@ export default defineGkdApp({
       name: '局部广告-卡片广告',
       desc: '点击关闭',
       fastQuery: true,
-      rules: [
-        {
-          key: 0,
-          matchRoot: true,
-          position: {
-            left: 'width * 0.9534',
-            top: 'width * 0.0805',
-          },
-          activityIds: '.activity.SplashActivity',
-          matches:
-            'LinearLayout[childCount=1] > FrameLayout[childCount=1] > FrameLayout[childCount=1] > @View[visibleToUser=true][childCount=0] <<n [vid="root"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14732983',
-            'https://i.gkd.li/i/15455886',
-          ],
-        },
-        {
-          key: 2,
-          activityIds: '.activity.SplashActivity',
-          matches:
-            '@[desc="关闭"][clickable=true][visibleToUser=true] <2 RelativeLayout[childCount=2] >2 TextView[text^="Hi，"]',
-          snapshotUrls: 'https://i.gkd.li/i/15272076',
-        },
-        {
-          key: 3,
-          activityIds: '.activity.SplashActivity',
-          matches:
-            'FrameLayout[childCount=7] > FrameLayout[childCount=2] > @ImageView[childCount=0] <<n [vid="root"]',
-          snapshotUrls: 'https://i.gkd.li/i/15388608',
-        },
-        {
-          key: 4,
-          activityIds: '.activity.SplashActivity',
-          matches:
-            '@[desc="关闭"][clickable=true][visibleToUser=true] <2 RelativeLayout[childCount=2] >2 TextView[text*="限时"][text.length<12]',
-          snapshotUrls: 'https://i.gkd.li/i/15514151',
-        },
-        {
-          key: 5,
-          activityIds: '.activity.SplashActivity',
-          matches: '@ImageView[clickable=true] - [text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/i/16318421',
-        },
-      ],
+      rules: [],
     },
     {
       key: 11,
@@ -338,23 +279,16 @@ export default defineGkdApp({
     },
     {
       key: 14,
-      name: '全屏广告-聊天页面关键词广告',
+      name: '全屏广告-迷你窝弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
       rules: [
         {
-          key: 0,
           fastQuery: true,
-          activityIds: [
-            '.profilecard.activity.FriendProfileCardActivity',
-            '.activity.ChatActivity',
-            '.activity.SplashActivity',
-          ],
-          matches:
-            'FrameLayout[childCount=2] >2 FrameLayout[childCount=2] >3 FrameLayout[childCount=2] > [text="跳过" || text="关闭"][clickable=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14183188',
-            'https://i.gkd.li/i/16549500',
-            'https://i.gkd.li/i/16555184',
-          ],
+          action: 'back',
+          activityIds: '.profilecard.activity.FriendProfileCardActivity',
+          matches: '[text="开启迷你窝"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21750442',
         },
       ],
     },
