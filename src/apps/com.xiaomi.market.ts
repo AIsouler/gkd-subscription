@@ -41,5 +41,26 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '功能类-首次打开直接进入应用升级页面',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: '.business_ui.main.MarketTabActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '@[vid="tab_view_root"][clickable=true] > [text="我的"]',
+          snapshotUrls: 'https://i.gkd.li/i/21765941',
+        },
+        {
+          preKeys: [0],
+          matches: '[vid="update_layout"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21765942',
+        },
+      ],
+    },
   ],
 });
