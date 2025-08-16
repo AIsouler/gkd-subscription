@@ -25,10 +25,13 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
+          action: 'back',
           activityIds: 'com.yxcorp.gifshow.HomeActivity',
-          matches:
-            '@ViewGroup[clickable=true] >2 [text="不感兴趣"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/20700498',
+          matches: '[text="上滑继续观看视频"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/20700498',
+            'https://i.gkd.li/i/21812276',
+          ],
         },
       ],
     },
