@@ -6,7 +6,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '全屏广告-关闭花呗升级弹窗',
+      name: '全屏广告-花呗升级弹窗',
       actionMaximum: 1,
       rules: [
         {
@@ -57,7 +57,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '功能类-关闭设置小组件弹窗',
+      name: '其他-小组件弹窗',
       rules: [
         {
           fastQuery: true,
@@ -97,28 +97,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '全屏广告-[下次支付用花呗]弹窗',
-      desc: '点击"30天不再提醒"',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
-          matches: [
-            '[text="同意协议并开通" || text*="开通花呗"][visibleToUser=true]',
-            '[text="30天不再提醒" || text="不感兴趣"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/14060628',
-            'https://i.gkd.li/i/15050300',
-            'https://i.gkd.li/i/20684144',
-          ],
-        },
-      ],
-    },
-    {
       key: 6,
       name: '功能类-关闭免密支付开关',
       actionMaximum: 1,
@@ -138,17 +116,22 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '全屏广告-[0元下单权益]弹窗',
-      desc: '支付完成后出现',
+      name: '全屏广告-支付后的推荐弹窗',
       rules: [
         {
           fastQuery: true,
           activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
           matches: [
-            '[text="恭喜获得「0元下单」权益"]',
+            '[text$="推荐你"][visibleToUser=true]',
             '@[clickable=true] > [text="关闭"]',
           ],
-          snapshotUrls: 'https://i.gkd.li/i/14893122',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14060628',
+            'https://i.gkd.li/i/14893122',
+            'https://i.gkd.li/i/15050300',
+            'https://i.gkd.li/i/20684144',
+            'https://i.gkd.li/i/21917640',
+          ],
         },
       ],
     },
