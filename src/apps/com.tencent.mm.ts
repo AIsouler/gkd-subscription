@@ -180,26 +180,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '青少年模式',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      rules: [
-        {
-          activityIds: '.plugin.finder.',
-          matches:
-            '@[text="我知道了"][index=parent.childCount.minus(1)] <n LinearLayout > [text^="为呵护未成年人健康成长"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13538145',
-            'https://i.gkd.li/i/13575195',
-            'https://i.gkd.li/i/18135103',
-            'https://i.gkd.li/i/19683937',
-          ],
-        },
-      ],
-    },
-    {
       key: 8,
       name: '功能类-付款后自动点击完成/返回商家',
       rules: [
