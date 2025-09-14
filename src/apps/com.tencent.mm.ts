@@ -24,11 +24,21 @@ export default defineGkdApp({
             'https://i.gkd.li/i/20074295',
           ],
         },
+        {
+          key: 2,
+          position: {
+            left: 'width * 0.9',
+            top: 'height * 0.5',
+          },
+          matches:
+            'RecyclerView > FrameLayout[id=null][text=null][desc=null][childCount=1] >4 LinearLayout > LinearLayout > @LinearLayout[childCount=2] > LinearLayout[index=1][childCount=0][clickable=false][visibleToUser=false]',
+          snapshotUrls: 'https://i.gkd.li/i/22319705',
+        },
 
         // 预留key
         // 第二段
         {
-          preKeys: [0, 1],
+          preKeys: [0, 1, 2],
           key: 25,
           fastQuery: true,
           anyMatches: [
