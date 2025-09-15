@@ -26,6 +26,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
+          actionDelay: 500,
           position: {
             left: 'width * 0.9',
             top: 'height * 0.5',
