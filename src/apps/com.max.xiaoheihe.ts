@@ -33,11 +33,12 @@ export default defineGkdApp({
             '.module.bbs.post.ui.activitys.PicturePostPageActivity',
             '.module.bbs.post.ui.activitys.WebNewsPostPageActivity',
           ],
-          matches: '[text^="查看原图"][visibleToUser=true]',
+          matches: '[vid="tv_original"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/19996647',
             'https://i.gkd.li/i/19996671',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/22377026',
         },
       ],
     },
