@@ -291,5 +291,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 15,
+      name: '功能类-自动允许打开外部应用',
+      desc: '授权应用：Via浏览器',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.plugin.webview.ui.tools.MMWebViewUI',
+          matches: [
+            '[text="即将离开微信，打开“Via”"][visibleToUser=true]',
+            '[text="允许"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/22451505',
+        },
+      ],
+    },
   ],
 });
