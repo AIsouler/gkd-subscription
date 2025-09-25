@@ -145,21 +145,18 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds: [
-            '.plugin.gallery.ui.AlbumPreviewUI',
-            '.plugin.gallery.ui.ImagePreviewUI',
-          ],
-          anyMatches: [
-            '@ImageButton[desc="未选中,原图,复选框"][visibleToUser=true] + [text="原图"]',
-            '@ImageButton[desc="未选中,原图,复选框"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/16987145', // 未选中
-            'https://i.gkd.li/i/16987144', // 未选中
-            'https://i.gkd.li/i/16987141', // 已选中
-            'https://i.gkd.li/i/16987147', // 已选中
-            'https://i.gkd.li/i/19625049', // 无法快速查询
-          ],
+          activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
+          matches:
+            '@[desc="未选中,原图,复选框"] < RelativeLayout < RelativeLayout + RelativeLayout > [text="预览"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/22528658',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.plugin.gallery.ui.ImagePreviewUI',
+          matches:
+            '@[desc="未选中,原图,复选框"] < RelativeLayout < RelativeLayout + [text="编辑"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/22528661',
         },
       ],
     },
