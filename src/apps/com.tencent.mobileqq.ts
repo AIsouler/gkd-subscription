@@ -81,6 +81,7 @@ export default defineGkdApp({
           activityIds: [
             'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
             'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
+            'com.tencent.open.agent.QuickLoginAuthorityActivity',
           ],
           matches: [
             '[text="登录确认" || text$="申请使用"][visibleToUser=true]',
@@ -91,6 +92,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/20737651',
             'https://i.gkd.li/i/20737675',
             'https://i.gkd.li/i/20737673',
+            'https://i.gkd.li/i/22631619',
           ],
         },
       ],
