@@ -155,7 +155,7 @@ export const blackListAppIDs: string[] = [
   'cn.cyberIdentity.certification', // 国家网络身份认证
   'com.ifreedomer.flix', // Flix
   'com.bitwarden.authenticator', // Bitwarden Authenticator
-  'ai.x.grok', // Grok
+  'ai.x.grok', // Grok 全局规则误触 https://i.gkd.li/i/22884434
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
