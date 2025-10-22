@@ -94,13 +94,14 @@ export default defineGkdApp({
         },
         {
           preKeys: [0],
-          matches: '@[clickable=true] > [text="不感兴趣"]',
+          matches: '@[clickable=true] >(1,2) [text="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/i/19004649',
             'https://i.gkd.li/i/19643258',
             'https://i.gkd.li/i/19643262',
             'https://i.gkd.li/i/20776872',
             'https://i.gkd.li/i/21693916',
+            'https://i.gkd.li/i/23046625',
           ],
         },
       ],
