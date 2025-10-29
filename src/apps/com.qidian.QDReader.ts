@@ -71,7 +71,6 @@ export default defineGkdApp({
     {
       key: 5,
       name: '青少年模式',
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
@@ -80,7 +79,7 @@ export default defineGkdApp({
           activityIds: '.ui.activity.MainGroupActivity',
           matches: [
             '[text*="青少年模式"][visibleToUser=true]',
-            '[text="我知道了"][visibleToUser=true]',
+            '@[vid="btnCancel"] >2 [text="我知道了"][visibleToUser=true]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/23210752',
         },
