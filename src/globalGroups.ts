@@ -10,7 +10,7 @@ export default defineGkdGlobalGroups([
     name: '开屏广告-全局',
     order: OPEN_AD_ORDER,
     fastQuery: true,
-    matchTime: 10000,
+    matchTime: 6000,
     actionMaximum: 2,
     resetMatch: 'app',
     actionCdKey: 0,
@@ -26,11 +26,12 @@ export default defineGkdGlobalGroups([
         anyMatches: [
           '[text*="跳过"][text.length<10][visibleToUser=true]',
           '@View[clickable=true][childCount=0] - [text="互动广告"][visibleToUser=true]',
-          '[childCount=0][visibleToUser=true][(text.length<10 && (text*="跳过" || text*="跳過" || text~="(?is).*skip.*") && text!*="视频") || (vid~="(?is).*skip.*" && vid!~="(?is).*video.*" && text!="帮助" && text!="取消") || id$="tt_splash_skip_btn" || (desc.length<10 && (desc*="跳过" || desc*="跳過" || desc~="(?is).*skip.*"))]',
+          '[childCount=0][visibleToUser=true][(text.length<10 && (text*="跳过" || text*="跳過" || text~="(?is).*skip.*") && text!*="视频") || (vid~="(?is).*skip.*" && vid!~="(?is).*video.*" && text!="帮助" && text!="取消" && text!*="退出") || id$="tt_splash_skip_btn" || (desc.length<10 && (desc*="跳过" || desc*="跳過" || desc~="(?is).*skip.*"))]',
         ],
         snapshotUrls: 'https://i.gkd.li/i/21617612', // 互动开屏广告
         excludeSnapshotUrls: [
           // 避免误触
+          'https://i.gkd.li/i/15079224', // text!*="退出"
           'https://i.gkd.li/i/17108010', // text!="帮助"
           'https://i.gkd.li/i/18265000', // text!="取消"
           'https://i.gkd.li/i/19580951', // text="退款详情"
@@ -69,7 +70,7 @@ export default defineGkdGlobalGroups([
     name: '青少年模式-全局',
     order: YOUTH_MODE_ORDER,
     fastQuery: true,
-    matchTime: 10000,
+    matchTime: 8000,
     actionMaximum: 1,
     resetMatch: 'app',
     disableIfAppGroupMatch: '青少年模式',
@@ -77,8 +78,8 @@ export default defineGkdGlobalGroups([
       {
         key: 0,
         matches: [
-          '[text*="青少年" || text*="未成年" || text*="儿童"][text*="模式" || text*="守护"][text.length<15][childCount=0][visibleToUser=true]',
-          '[text*="知道了" || text*="我已知晓" || text*="已满" || text*="不再提醒"][text.length<8][childCount=0][visibleToUser=true]',
+          '[text*="青少年" || text*="未成年"][text*="模式" || text*="守护"][text.length<15][childCount=0][visibleToUser=true]',
+          '[text*="知道了" || text*="我已知晓"|| text*="不再提醒"][text.length<8][childCount=0][visibleToUser=true]',
         ],
       },
     ],

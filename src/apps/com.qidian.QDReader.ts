@@ -23,8 +23,9 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.ui.activity.MainGroupActivity',
-          matches: '[vid="btnCheckIn"][visibleToUser=true]',
+          matches: '@[vid="btnCheckIn"] >2 [text="签到"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/22634962',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/23210761',
         },
       ],
     },
@@ -37,12 +38,51 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.ui.activity.QDBookDetailActivity',
+          activityIds: [
+            '.ui.activity.QDBookDetailActivity',
+            '.ui.activity.MainGroupActivity',
+          ],
           matches: [
             '[text="允许通知"][visibleToUser=true]',
             '[vid="closeBtn"][visibleToUser=true]',
           ],
-          snapshotUrls: 'https://i.gkd.li/i/22634980',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22634980',
+            'https://i.gkd.li/i/23210768',
+          ],
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '全屏广告',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.ui.activity.MainGroupActivity',
+          matches: '[vid="imgClose"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23210736',
+            'https://i.gkd.li/i/23210763',
+          ],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '青少年模式',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.ui.activity.MainGroupActivity',
+          matches: [
+            '[text*="青少年模式"][visibleToUser=true]',
+            '[text="我知道了"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/23210752',
         },
       ],
     },
