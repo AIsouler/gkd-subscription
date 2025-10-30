@@ -23,9 +23,13 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.ui.activity.MainGroupActivity',
+          excludeMatches: '[vid="tvTipNum"][text="--"][visibleToUser=true]',
           matches: '@[vid="btnCheckIn"] >2 [text="签到"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/22634962',
-          excludeSnapshotUrls: 'https://i.gkd.li/i/23210761',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/23210761',
+            'https://i.gkd.li/i/23211622',
+          ],
         },
       ],
     },
