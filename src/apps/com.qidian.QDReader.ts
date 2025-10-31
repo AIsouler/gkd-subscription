@@ -64,10 +64,11 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.ui.activity.MainGroupActivity',
-          matches: '[vid="imgClose"][visibleToUser=true]',
+          matches: '[vid="imgClose" || vid="btnClose"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/23210736',
             'https://i.gkd.li/i/23210763',
+            'https://i.gkd.li/i/23249358',
           ],
         },
       ],
