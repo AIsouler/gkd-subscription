@@ -19,7 +19,8 @@ export default defineGkdApp({
             '.music.biz.setting.activity.SettingActivity',
             '.music.biz.search.activity.SearchActivity',
           ],
-          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          matches:
+            '[text*="跳过"][text.length<10][width<400 && height<200][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/15092772',
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/15092814',
