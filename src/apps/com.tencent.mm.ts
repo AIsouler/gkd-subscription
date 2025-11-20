@@ -98,45 +98,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '功能类-自动领取微信红包',
-      desc: '自动领取私聊红包,群聊红包',
-      fastQuery: true,
-      rules: [
-        {
-          key: 0,
-          name: '点击别人发的红包',
-          activityIds: '.ui.LauncherUI',
-          matches:
-            'LinearLayout[childCount=1] >2 @FrameLayout[clickable=true] >2 LinearLayout[getChild(1).childCount=1] +2 RelativeLayout > [text="微信红包"]',
-          snapshotUrls: 'https://i.gkd.li/i/18134826',
-          excludeSnapshotUrls: [
-            'https://i.gkd.li/i/18134823', // 自己发的， LinearLayout[childCount=1] 区分
-            'https://i.gkd.li/i/18134833', // 已领取的， getChild(1).childCount=1 区分
-          ],
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          name: '点击红包-开',
-          activityIds: '.plugin.luckymoney.ui.LuckyMoneyNotHookReceiveUI',
-          matches: '@Button[desc="开"] -3 LinearLayout >2 [text$="红包"]',
-          snapshotUrls: 'https://i.gkd.li/i/18134828',
-          excludeSnapshotUrls: 'https://i.gkd.li/i/12567698', // 金币动画的快照
-        },
-        {
-          preKeys: [0, 1],
-          name: '从红包结算界面返回',
-          activityIds: '.plugin.luckymoney.ui.LuckyMoneyDetailUI',
-          matches: '@ImageView[desc="返回"] +2 LinearLayout >8 [text$="红包"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/18134829',
-            'https://i.gkd.li/i/18135031',
-          ],
-        },
-      ],
-    },
-    {
       key: 5,
       name: '功能类-自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
@@ -189,18 +150,14 @@ export default defineGkdApp({
     },
     {
       key: 8,
-      name: '功能类-付款后自动点击完成/返回商家',
+      name: '功能类-付款后自动点击[返回商家]',
       rules: [
         {
           fastQuery: true,
-          activityIds: '.framework.app.UIPageFragmentActivity',
+          activityIds: '.plugin.lite.ui.WxaLiteAppTransparentLiteUI',
           matches:
-            '[vid="kinda_button_impl_wrapper"][desc="完成" || desc="返回商家"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14399355',
-            'https://i.gkd.li/i/14662147',
-          ],
-          excludeSnapshotUrls: 'https://i.gkd.li/i/14532946',
+            '@Button[desc="返回商家"][childCount=0][visibleToUser=true] <4 ScrollView < View < View < View < View < View < FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/23646449',
         },
       ],
     },
@@ -220,19 +177,13 @@ export default defineGkdApp({
     {
       key: 11,
       name: '功能类-付款时自动点击[支付]',
-      fastQuery: true,
       actionMaximum: 1,
       rules: [
         {
-          key: 0,
-          activityIds: '.framework.app.UIPageFragmentActivity',
+          activityIds: '.plugin.lite.ui.WxaLiteAppTransparentLiteUI',
           matches:
-            'ViewGroup + ViewGroup > ViewGroup > [vid="kinda_button_impl_wrapper"][desc="支付"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15144570',
-            'https://i.gkd.li/i/15144571',
-            'https://i.gkd.li/i/15360745',
-          ],
+            '[desc^="付款方式"] + Button[desc="支付"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23646466',
         },
       ],
     },

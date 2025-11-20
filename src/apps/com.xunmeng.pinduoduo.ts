@@ -73,7 +73,7 @@ export default defineGkdApp({
             '.ui.activity.HomeActivity',
           ],
           matches:
-            '@[clickable=true][childCount=0][index=0][text="" || text="关闭弹窗"] < View >(1,2) [text$="拼单成功" || text*="下单成功" ||text$="已支付" || text="待发货"]',
+            '@[clickable=true][childCount=0][index=0][text="" || text="关闭弹窗"] < View >(1,2) [text$="拼单成功" || text*="下单成功" ||text$="已支付" || text="待发货"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13308175',
             'https://i.gkd.li/i/13927594',
@@ -83,6 +83,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16377027',
             'https://i.gkd.li/i/21401136',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/23646442',
         },
       ],
     },
