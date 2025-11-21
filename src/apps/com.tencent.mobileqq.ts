@@ -131,12 +131,18 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          activityIds: '.upgrade.activity.UpgradeActivity',
+          activityIds: [
+            '.upgrade.activity.UpgradeActivity',
+            '.upgrade.ui.dialog.UpgradeActivity',
+          ],
           matches: [
             '[text="立即体验"][visibleToUser=true]',
             '[text="近期不提醒"][visibleToUser=true]',
           ],
-          snapshotUrls: 'https://i.gkd.li/i/19141671',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19141671',
+            'https://i.gkd.li/i/23670528',
+          ],
         },
       ],
     },
