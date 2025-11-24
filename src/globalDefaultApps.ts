@@ -157,6 +157,8 @@ export const blackListAppIDs: string[] = [
   'com.bitwarden.authenticator', // Bitwarden Authenticator
   'ai.x.grok', // Grok 全局规则误触 https://i.gkd.li/i/22884434
   'com.huanchengfly.tieba.post.self', // 贴吧Lite
+  'com.google.android.googlequicksearchbox', // Google
+  'com.google.android.apps.bard', // Gemini
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
