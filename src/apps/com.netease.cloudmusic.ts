@@ -34,8 +34,6 @@ export default defineGkdApp({
       name: '分段广告-推荐页卡片广告',
       desc: '点击关闭-点击直接关闭',
       fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
       activityIds: '.activity.MainActivity',
       rules: [
         {
@@ -63,10 +61,11 @@ export default defineGkdApp({
             '.activity.MainActivity',
             '.activity.PlayerActivity',
             '.music.biz.rn.activity.LayerReactNativeActivity',
+            '.music.biz.comment.activity.CommentActivity',
           ],
           excludeMatches: '[text="当前场景"][visibleToUser=true]',
           matches:
-            '[vid="dsl_dialog_root" || text^="邀您开通VIP" || text^="本周已免费试听" || text^="免费听模式体验中" || text$="立即续费"][visibleToUser=true]',
+            '[vid="dsl_dialog_root" || text^="邀您开通VIP" || text^="本周已免费试听" || text^="免费听模式体验中" || text$="立即续费" || text*="小组件到桌面"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13804534',
             'https://i.gkd.li/i/13848913',
@@ -79,6 +78,8 @@ export default defineGkdApp({
             'https://i.gkd.li/i/20097609',
             'https://i.gkd.li/i/20115012',
             'https://i.gkd.li/i/22451511',
+            'https://i.gkd.li/i/23770986',
+            'https://i.gkd.li/i/23770978',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/15404777',
