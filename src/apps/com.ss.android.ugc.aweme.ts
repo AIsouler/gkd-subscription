@@ -39,6 +39,7 @@ export default defineGkdApp({
           action: 'back',
           activityIds: '.main.MainActivity',
           matches: [
+            '[desc^="已选中"] > [text="推荐"][visibleToUser=true]', // 其他页面可能会误触回到推荐页
             '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text$="游戏" || text="子薇剧场" || text="预约"][visibleToUser=true])',
           ],
           snapshotUrls: [
