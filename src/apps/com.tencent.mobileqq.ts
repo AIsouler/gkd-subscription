@@ -35,40 +35,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '分段广告-动态页[好友热播/为你推荐]',
-      fastQuery: true,
-      activityIds: [
-        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
-        '.activity.SplashActivity',
-      ],
-      rules: [
-        {
-          key: 0,
-          matches:
-            '@[clickable=true][visibleToUser=true][childCount=0] - [text="好友热播" || text="为你推荐"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12721427',
-            'https://i.gkd.li/i/12929620',
-            'https://i.gkd.li/i/13387606',
-            'https://i.gkd.li/i/14822579',
-          ],
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches:
-            '@[clickable=true] >2 [text="减少好友热播" || text="减少此类推荐"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12721433',
-            'https://i.gkd.li/i/12929619',
-            'https://i.gkd.li/i/13387605',
-            'https://i.gkd.li/i/14822576',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '功能类-登录授权',
       rules: [
@@ -215,63 +181,6 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '局部广告-卡片广告',
-      desc: '点击关闭',
-      fastQuery: true,
-      rules: [],
-    },
-    {
-      key: 11,
-      name: '分段广告-动态页官方号动态',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: '.activity.SplashActivity',
-      rules: [
-        {
-          key: 0,
-          matches:
-            '@ImageView[clickable=true][visibleToUser=true][childCount=0] - ViewGroup >2 [desc="官方Qzone"] <<n [vid="root"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15347669',
-            'https://i.gkd.li/i/15600523',
-          ],
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches: '@[clickable=true] >2 [text="隐藏此条动态"]',
-          snapshotUrls: 'https://i.gkd.li/i/15347668',
-        },
-        {
-          preKeys: [1],
-          key: 2,
-          matches: '[text="确定"]',
-          snapshotUrls: 'https://i.gkd.li/i/15347667',
-        },
-      ],
-    },
-    {
-      key: 12,
-      name: '分段广告-动态页广告',
-      fastQuery: true,
-      activityIds: '.activity.SplashActivity',
-      rules: [
-        {
-          key: 0,
-          matches: '@[desc="更多"] <5 * > [desc="广告"] <<n [vid="root"]',
-          snapshotUrls: 'https://i.gkd.li/i/15348356',
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches: '@[clickable=true] > [text="关闭此条广告"]',
-          snapshotUrls: 'https://i.gkd.li/i/15348359',
-        },
-      ],
-    },
-    {
-      key: 13,
       name: '功能类-自动解锁 Windows QQ',
       fastQuery: true,
       matchTime: 10000,
@@ -282,21 +191,6 @@ export default defineGkdApp({
             'com.tencent.biz.qrcode.activity.UnlockPCQuickVerifyActivity',
           matches: '[text="解锁"]',
           snapshotUrls: 'https://i.gkd.li/i/15360265',
-        },
-      ],
-    },
-    {
-      key: 14,
-      name: '全屏广告-迷你窝弹窗',
-      matchTime: 10000,
-      actionMaximum: 1,
-      rules: [
-        {
-          fastQuery: true,
-          action: 'back',
-          activityIds: '.profilecard.activity.FriendProfileCardActivity',
-          matches: '[text="开启迷你窝"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/21750442',
         },
       ],
     },
