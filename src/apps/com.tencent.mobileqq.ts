@@ -194,5 +194,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 11,
+      name: '功能类-自动允许打开其他应用',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.activity.QQBrowserActivity',
+          matches: [
+            '[text^="即将离开QQ"][visibleToUser=true]',
+            '[text="允许"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/23924557',
+        },
+      ],
+    },
   ],
 });
