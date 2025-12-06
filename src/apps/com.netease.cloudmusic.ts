@@ -155,12 +155,22 @@ export default defineGkdApp({
       desc: '点击关闭',
       rules: [
         {
+          key: 0,
           fastQuery: true,
           matchTime: 10000,
           actionMaximum: 1,
           activityIds: '.music.biz.rn.activity.MainProcessRNActivity',
           matches: '[vid="adTagView"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20367030',
+        },
+        {
+          key: 1,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: '.activity.MainActivity',
+          matches: '[vid="v_close"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23982125',
         },
       ],
     },
