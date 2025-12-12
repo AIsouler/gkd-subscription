@@ -17,7 +17,7 @@ export default defineGkdApp({
           action: 'clickCenter',
           excludeActivityIds: '.ona.activity.SearchPagerActivity',
           matches:
-            '[text*="跳过"][text.length<10][width<400 && height<200][visibleToUser=true]',
+            '[text*="跳过"][text.length<10][width<500 && height<200][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20691457',
           excludeSnapshotUrls: 'https://i.gkd.li/i/20691504',
         },
