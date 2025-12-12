@@ -159,6 +159,8 @@ export const blackListAppIDs: string[] = [
   'com.huanchengfly.tieba.post.self', // 贴吧Lite
   'com.google.android.googlequicksearchbox', // Google
   'com.google.android.apps.bard', // Gemini
+  'com.gtxfury.flyclash.meta', // FlyClash
+  'com.appshub.liclash', // LiClash
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
