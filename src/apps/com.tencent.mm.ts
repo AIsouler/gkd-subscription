@@ -181,6 +181,18 @@ export default defineGkdApp({
       actionMaximum: 1,
       rules: [
         {
+          key: 0,
+          activityIds: '.framework.app.UIPageFragmentActivity',
+          matches:
+            'ViewGroup + ViewGroup > ViewGroup > [vid="kinda_button_impl_wrapper"][desc="支付"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15144570',
+            'https://i.gkd.li/i/15144571',
+            'https://i.gkd.li/i/15360745',
+          ],
+        },
+        {
+          key: 1,
           activityIds: '.plugin.lite.ui.WxaLiteAppTransparentLiteUI',
           matches:
             '[desc^="付款方式"] + Button[desc="支付"][visibleToUser=true]',
