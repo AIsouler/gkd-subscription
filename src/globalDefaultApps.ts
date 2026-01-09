@@ -161,6 +161,8 @@ export const blackListAppIDs: string[] = [
   'com.google.android.apps.bard', // Gemini
   'com.gtxfury.flyclash.meta', // FlyClash
   'com.appshub.liclash', // LiClash
+  'com.android.purebilibili', // BiliPai
+  'com.bytedance.android.doubaoime', // 豆包输入法
 
   // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
