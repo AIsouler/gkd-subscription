@@ -90,12 +90,17 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: ['.detail.ui.DetailActivity', '.main.MainActivity'],
+          activityIds: [
+            '.detail.ui.DetailActivity',
+            '.main.MainActivity',
+            '.profile.ui.UserProfileActivity',
+          ],
           matches:
-            '[desc!^="收藏"] - @[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
+            '[!(desc^="收藏")] - @[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
           snapshotUrls: [
             'https://i.gkd.li/i/21388939',
             'https://i.gkd.li/i/21430232',
+            'https://i.gkd.li/i/24549453',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/21388934', // 已选中
