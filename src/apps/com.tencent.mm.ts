@@ -79,11 +79,11 @@ export default defineGkdApp({
     {
       key: 3,
       name: '功能类-自动授权登录',
-      desc: '自动允许使用头像昵称等',
       fastQuery: true,
       actionMaximum: 1,
       rules: [
         {
+          key: 0,
           activityIds: [
             '.plugin.webview.ui.tools.MMWebViewUI',
             '.plugin.webview.ui.tools.SDKOAuthUI',
@@ -94,6 +94,15 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15524445',
             'https://i.gkd.li/i/16972565',
           ],
+        },
+        {
+          preKeys: [0],
+          activityIds: '.plugin.webview.ui.tools.SDKOAuthOtherUI',
+          matches: [
+            '[text="申请获得"][visibleToUser=true]',
+            '[text="允许"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/24560465',
         },
       ],
     },
