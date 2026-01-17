@@ -39,7 +39,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          actionDelay: 15000,
+          actionDelay: 12000,
           position: {
             left: 'width * 7.45',
             top: 'height * 0.5',
@@ -62,7 +62,7 @@ export default defineGkdApp({
         {
           preKeys: [0, 1],
           fastQuery: true,
-          actionDelay: 1000,
+          actionDelay: 500,
           activityIds: [
             'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoActivity',
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
