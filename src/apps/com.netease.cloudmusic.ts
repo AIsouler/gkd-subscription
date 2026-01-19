@@ -178,6 +178,7 @@ export default defineGkdApp({
       key: 7,
       name: '功能类-扫码后自动点击[授权登录]',
       fastQuery: true,
+      matchRoot: true,
       matchTime: 10000,
       actionMaximum: 1,
       rules: [
