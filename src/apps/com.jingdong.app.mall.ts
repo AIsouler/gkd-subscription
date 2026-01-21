@@ -16,7 +16,7 @@ export default defineGkdApp({
         {
           excludeActivityIds: 'com.jd.lib.search.view.Activity.SearchActivity',
           matches:
-            '[text*="跳过"][text.length<10][width<500 && height<200][visibleToUser=true]',
+            '[text*="跳过"][text.length<10][width<500 && height<300][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/16323111',
           excludeSnapshotUrls: 'https://i.gkd.li/i/16323115',
         },

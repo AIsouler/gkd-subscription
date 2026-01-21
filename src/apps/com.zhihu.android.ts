@@ -19,7 +19,7 @@ export default defineGkdApp({
             '.comment.ui.activity.CommentListActivity',
           ],
           matches:
-            '([vid="btn_skip"][visibleToUser=true]) || ([text*="跳过"][text.length<10][width<500 && height<200][visibleToUser=true])',
+            '([vid="btn_skip"][visibleToUser=true]) || ([text*="跳过"][text.length<10][width<500 && height<300][visibleToUser=true])',
           snapshotUrls: [
             'https://i.gkd.li/i/18221451',
             'https://i.gkd.li/i/22714295',
