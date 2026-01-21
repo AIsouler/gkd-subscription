@@ -64,19 +64,20 @@ export default defineGkdApp({
     {
       key: 5,
       name: '功能类-自动允许启动应用',
-      desc: '授权应用: InstallerX',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
+      desc: '授权应用: InstallerX、Via浏览器',
       rules: [
         {
+          fastQuery: true,
           activityIds: 'com.miui.wakepath.ui.ConfirmStartActivity',
-          matches: ['[text*="InstallerX"][text*="想要打开"]', '[text$="允许"]'],
+          matches: [
+            '[text*="想要打开"][text*="InstallerX" || text*="Via"][visibleToUser=true]',
+            '[text="始终允许" || text="允许"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/15263088',
             'https://i.gkd.li/i/20748624',
             'https://i.gkd.li/i/20748626',
+            'https://i.gkd.li/i/24759533',
           ],
         },
       ],
