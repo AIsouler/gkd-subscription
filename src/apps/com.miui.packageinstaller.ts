@@ -17,6 +17,8 @@ export default defineGkdApp({
             'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
             'com.miui.packageInstaller.NewInstallerPrepareActivity',
           ],
+          excludeMatches:
+            '[text="已了解此应用存在风险"][checked=false][visibleToUser=true]',
           matches:
             '@FrameLayout[clickable=true] > LinearLayout[childCount=1] > [text^="继续" || text^="仍然"][text.length=4][visibleToUser=true]',
           snapshotUrls: [
@@ -25,6 +27,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17691996',
             'https://i.gkd.li/i/20053957',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/25095995',
         },
         {
           preKeys: [0],
@@ -98,7 +101,7 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '功能类-备案信息弹窗',
+      name: '功能类-关闭备案信息弹窗',
       desc: '点击[继续安装]',
       actionMaximum: 1,
       rules: [
@@ -149,6 +152,19 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18002712',
             'https://i.gkd.li/i/20746863',
           ],
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '功能类-自动勾选[已了解此应用存在风险]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
+          matches:
+            '[text="已了解此应用存在风险"][checked=false][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25095995',
         },
       ],
     },
