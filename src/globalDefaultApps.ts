@@ -163,9 +163,13 @@ export const blackListAppIDs: string[] = [
   'com.appshub.liclash', // LiClash
   'com.android.purebilibili', // BiliPai
   'com.bytedance.android.doubaoime', // 豆包输入法
-
-  // 游戏
   'com.ChillyRoom.DungeonShooter', // 元气骑士
+  'com.nyapass.loader', // NyaLoader
+  'com.appshub.bettbox', // Bettbox
+  'com.abdownloadmanager', // ABDM
+  'org.easybangumi.next', // 纯纯看番 Next
+  'org.xmsleep.app', // XMSleep
+  'io.github.stelliberty', // Stelliberty
 ];
 
 // 在应用中单独禁用某个全局规则
