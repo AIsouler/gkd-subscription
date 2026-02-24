@@ -42,7 +42,7 @@
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
     "@types/node": "25.3.0",
-    "eslint": "10.0.1",
+    "eslint": "10.0.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-unused-imports": "4.4.1",
     "json5": "2.2.3",
@@ -51,7 +51,7 @@
     "simple-git-hooks": "2.13.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "^8.56.0"
+    "typescript-eslint": "^8.56.1"
   },
   "volta": {
     "node": "20.12.1"
