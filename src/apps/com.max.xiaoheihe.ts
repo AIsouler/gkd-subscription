@@ -32,11 +32,13 @@ export default defineGkdApp({
           activityIds: [
             '.module.bbs.post.ui.activitys.PicturePostPageActivity',
             '.module.bbs.post.ui.activitys.WebNewsPostPageActivity',
+            '.module.bbs.post.ui.activitys.v2.PicturePostPageActivityV2',
           ],
           matches: '[vid="tv_original"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/19996647',
             'https://i.gkd.li/i/19996671',
+            'https://i.gkd.li/i/25544406',
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/22377026',
         },
