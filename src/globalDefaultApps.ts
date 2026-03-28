@@ -170,6 +170,9 @@ export const blackListAppIDs: string[] = [
   'org.easybangumi.next', // 纯纯看番 Next
   'org.xmsleep.app', // XMSleep
   'io.github.stelliberty', // Stelliberty
+  'one.next.player', // One Player
+  'com.lonx.lyrico', // Lyrico
+  'com.github.zly2006.zhplus.lite', // 知乎++
 ];
 
 // 在应用中单独禁用某个全局规则
