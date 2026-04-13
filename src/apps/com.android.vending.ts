@@ -12,12 +12,16 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.google.android.finsky.activities.MainActivity',
+          activityIds: [
+            'com.google.android.finsky.activities.MainActivity',
+            'com.google.android.finsky.transparentmainactivity.TransparentMainActivity',
+          ],
           matches: '[text="以后再说" || text="不用了"]',
           snapshotUrls: [
             'https://i.gkd.li/i/14958783',
             'https://i.gkd.li/i/16227605',
             'https://i.gkd.li/i/16982900',
+            'https://i.gkd.li/i/26643478',
           ],
         },
       ],

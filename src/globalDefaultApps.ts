@@ -173,6 +173,9 @@ export const blackListAppIDs: string[] = [
   'one.next.player', // One Player
   'com.lonx.lyrico', // Lyrico
   'com.github.zly2006.zhplus.lite', // 知乎++
+  'com.f0x1d.logfox', // LogFox
+  'com.huicunjun.bbrowser', // B仔浏览器
+  'com.guiwu.assets.ld', // 归物
 ];
 
 // 在应用中单独禁用某个全局规则
