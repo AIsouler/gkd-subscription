@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -31,7 +32,6 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          fastQuery: true,
           matches:
             '[!(id="com.coolapk.market:id/item_view") && !(vid="card_view")] > [text*="跳过"][text.length<10][width<500 && height<300][visibleToUser=true]',
           snapshotUrls: [
@@ -44,6 +44,12 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13296816',
             'https://i.gkd.li/i/18245546',
           ],
+        },
+        {
+          key: 2,
+          matches:
+            '@ImageView[childCount=0] < ViewGroup < ViewGroup +2 ViewGroup >2 [text="广告"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/27078867',
         },
       ],
     },
