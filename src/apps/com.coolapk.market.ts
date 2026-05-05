@@ -48,8 +48,11 @@ export default defineGkdApp({
         {
           key: 2,
           matches:
-            '@ImageView[childCount=0] < ViewGroup < ViewGroup +2 ViewGroup >2 [text="广告"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/27078867',
+            '@ImageView[childCount=0] < ViewGroup < ViewGroup +(2,3) ViewGroup >2 [text="广告"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/27078867',
+            'https://i.gkd.li/i/27380329',
+          ],
         },
       ],
     },
