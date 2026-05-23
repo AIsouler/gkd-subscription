@@ -6,7 +6,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '全屏广告-弹窗广告',
+      name: '全屏广告',
       matchRoot: true,
       fastQuery: true,
       matchTime: 10000,
@@ -24,6 +24,12 @@ export default defineGkdApp({
             'https://i.gkd.li/i/20946336',
             'https://i.gkd.li/i/23249365',
           ],
+        },
+        {
+          key: 1,
+          activityIds: '.business_ui.main.MarketTabActivity',
+          matches: '@[vid="iv_close"] - [vid="iv_ad"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/28174896',
         },
       ],
     },
