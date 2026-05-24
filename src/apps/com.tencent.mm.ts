@@ -57,6 +57,15 @@ export default defineGkdApp({
             'https://i.gkd.li/i/19633486',
           ],
         },
+
+        // 第三段
+        {
+          preKeys: [25],
+          key: 50,
+          fastQuery: true,
+          matches: '[text="直接关闭"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/28188162',
+        },
       ],
     },
     {
