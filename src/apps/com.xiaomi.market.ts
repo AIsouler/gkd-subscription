@@ -69,5 +69,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '局部广告',
+      rules: [
+        {
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: 'com.xiaomi.market.ui.UpdateListActivity',
+          matches: '[vid="orchard_banner_close"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/30769589',
+        },
+      ],
+    },
   ],
 });
