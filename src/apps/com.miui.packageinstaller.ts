@@ -50,16 +50,11 @@ export default defineGkdApp({
         'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
       rules: [
         {
-          key: 0,
-          name: '点击[30天内不再提示]',
-          matches: '[text="30天内不再提示"][checked=false]',
-          snapshotUrls: 'https://i.gkd.li/i/16487140',
-        },
-        {
-          preKeys: [0],
-          name: '点击[放弃]',
-          matches: '[text="放弃"]',
-          snapshotUrls: 'https://i.gkd.li/i/16487142',
+          matches: [
+            '[text*="开启增强防护"][visibleToUser=true]',
+            '[text="放弃"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/31010907',
         },
       ],
     },
@@ -88,13 +83,19 @@ export default defineGkdApp({
           ],
         },
         {
-          preKeys: [0],
+          key: 1,
+          matches: '[text$="正尝试安装应用"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/31010886',
+        },
+        {
+          preKeys: [0, 1],
           name: '点击[允许]',
-          matches: '[text="允许"][visibleToUser=true]',
+          matches: '[text="允许" || text="继续"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16487365',
             'https://i.gkd.li/i/18937576',
             'https://i.gkd.li/i/20287160',
+            'https://i.gkd.li/i/31010886',
           ],
         },
       ],
@@ -162,9 +163,11 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
-          matches:
-            '[text="已了解此应用存在风险"][checked=false][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25095995',
+          matches: '[text^="已了解此应用"][checked=false][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25095995',
+            'https://i.gkd.li/i/31010879',
+          ],
         },
       ],
     },
