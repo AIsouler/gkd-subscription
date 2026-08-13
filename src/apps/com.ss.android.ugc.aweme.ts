@@ -99,7 +99,7 @@ export default defineGkdApp({
             '.profile.ui.UserProfileActivity',
           ],
           matches:
-            '[!(desc^="收藏")] - @[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
+            'LinearLayout[childCount<7] + HorizontalScrollView >2 [!(desc^="收藏")] - @[desc^="作品"][clickable=true] > ViewGroup[childCount=1] >2 [text^="作品"]',
           snapshotUrls: [
             'https://i.gkd.li/i/21388939',
             'https://i.gkd.li/i/21430232',
@@ -108,6 +108,7 @@ export default defineGkdApp({
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/21388934', // 已选中
             'https://i.gkd.li/i/21441604',
+            'https://i.gkd.li/i/31021102',
           ],
         },
       ],
