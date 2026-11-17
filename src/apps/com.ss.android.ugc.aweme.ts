@@ -38,11 +38,13 @@ export default defineGkdApp({
               x: 'screenWidth * 0.5',
               y: 'screenHeight * 0.3',
             },
-            duration: 200,
+            duration: 300,
           },
           activityIds: '.main.MainActivity',
-          matches: [
-            '(FlattenUIText[text="不感兴趣"][visibleToUser=true]) || ([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text$="游戏" || text="子薇剧场" || text="预约"][visibleToUser=true])',
+          anyMatches: [
+            'FlattenUIText[text="不感兴趣"][visibleToUser=true]',
+            '[text$="广告"][vid="desc"][visibleToUser=true]',
+            'ImageView[childCount=0] + [text="应用" || text="购物" || text$="游戏" || text="子薇剧场" || text="预约"][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/20035670',

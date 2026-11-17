@@ -91,9 +91,11 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          action: 'back',
-          matches: '[text^="开启自启动"]',
-          snapshotUrls: 'https://i.gkd.li/i/15524706',
+          matches: ['[text^="开启自启动"]', '[text="知道了" || text="确定"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/15524706',
+            'https://i.gkd.li/i/34970577',
+          ],
         },
         {
           key: 1,
