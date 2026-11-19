@@ -29,17 +29,11 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          position: {
-            left: 'width * 0.9055',
-            top: 'width * 0.1611',
-          },
-          excludeMatches: '[text*="跳过"][visibleToUser=true]',
-          matches: '[vid="native_container"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15048354',
-            'https://i.gkd.li/i/18388919',
+          anyMatches: [
+            '@View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0] <n FrameLayout[childCount>2][text=null][desc=null] >(n+6) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑" || text*="省钱好物" || text*="扭一扭"][visibleToUser=true]',
+            'FrameLayout > FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]',
           ],
-          excludeSnapshotUrls: 'https://i.gkd.li/i/15048376', // 防止在此页面提前触发规则
+          snapshotUrls: 'https://i.gkd.li/i/35084444',
         },
       ],
     },

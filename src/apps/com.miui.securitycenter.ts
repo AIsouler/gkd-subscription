@@ -70,7 +70,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.miui.wakepath.ui.ConfirmStartActivity',
           matches: [
-            '[text*="想要打开"][text*="InstallerX" || text*="Via"][visibleToUser=true]',
+            '[text*="想要打开"][text*="InstallerX" || text*="Via" || text*="Quetta"][visibleToUser=true]',
             '[text="始终允许" || text="允许"][visibleToUser=true]',
           ],
           snapshotUrls: [
@@ -78,6 +78,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/20748624',
             'https://i.gkd.li/i/20748626',
             'https://i.gkd.li/i/24759533',
+            'https://i.gkd.li/i/35069647',
           ],
         },
       ],
